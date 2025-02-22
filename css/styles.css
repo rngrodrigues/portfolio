@@ -1,17 +1,23 @@
 body {
 background-color: black;
 color:  #dac5a7;
+transition: background-color 1s, color 1s;
+}
+.modo-escuro {
+background-color: rgb(231, 231, 231);
+color: #dac5a7;
 }
 header {
     position: fixed;
     top: 2vh;
     left: 50%; 
     transform: translateX(-50%);
-  background-color: rgba(65, 64, 64, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
   font-weight: bold;
 }
 nav {
-    box-shadow: 0 0 0 0.5px #dac5a7;
+    box-shadow: 0 0 0 0.8px #dac5a7;;
     }
 ul {
     display: flex;
