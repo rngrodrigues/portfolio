@@ -1,29 +1,104 @@
+
 body {
 background-color: black;
-color:  #dac5a7;
-transition: background-color 1s, color 1s;
+color:  rgb(255, 255, 255);
+transition: background-color 2s, color 2s;
 }
 .modo-escuro {
-background-color: rgb(231, 231, 231);
-color: #dac5a7;
+background-color: lightgray;
+color: rgb(0, 0, 0);
 }
 header {
     position: fixed;
     top: 2vh;
     left: 50%; 
     transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
-  font-weight: bold;
+    box-shadow: 0 0 0 0.8px gray;
 }
 nav {
-    box-shadow: 0 0 0 0.8px #dac5a7;;
+    box-shadow: 0 0 0 0.8px gray;
     }
 ul {
+    width: 55rem;
+    height: 6rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-li {
-    padding: 15px;
+.logo {
+    color: #445f80;
+    font-size: 3rem;
+    font-weight: bold;
 }
+li {
+    font-size: 1.3rem;
+    padding: 1rem; 
+}
+ .botao-tema {
+       font-size: 2rem;
+       color: black;
+       background-color: white;
+       width: 3rem;
+       border-radius: 1rem;
+       border: 0.1rem solid gray;
+        cursor: pointer;
+   }
+   .item-menu {
+    position: relative; 
+   }
+   .item-menu:before, .item-menu:after {
+    content:"";
+    position: absolute;
+height: 0.3rem;
+width: 0;
+background: linear-gradient(45deg, #999, #aaa, #bbb, #ccc, #ddd);
+transition: 0.5s;   
+}
+.item-menu:after {
+    left: 0;
+    bottom: -1rem;
+}
+.item-menu:before {
+right: 0;
+top: -1rem;
+}
+.item-menu:hover:after,
+.item-menu:hover:before {
+    width: 100%;
+}
+main {
+    margin: 0 auto;
+    max-width: 1300px;
+}
+#img-inicio {
+    display: flex;
+    justify-content: center;
+    height: 35vh;
+}
+#img-inicio img {
+   margin-top: 10rem;
+    border-radius: 30%;
+}
+#texto-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 40vh;
+}
+#texto-inicio h1 {
+    font-size: 11rem;
+    padding: 4rem 0rem 3rem 0rem;
+}
+#texto-inicio p:first-of-type {
+    font-size: 4rem;
+    max-width: 700px;
+    padding-bottom: 3rem;
+}
+.back-end {
+    color: #445f80;
+}
+
+
