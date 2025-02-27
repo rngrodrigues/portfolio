@@ -10,14 +10,15 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
+    <header >
 <nav>
-    <ul class="navbar">
+    
+    <ul id="menu" class="navbar">
         <li class="logo">RR </li>
-        <li><a class="item-menu" href="">Projetos</a></li>
-        <li><a class="item-menu" href="">Experiência</a></li>
-        <li><a class="item-menu" href="">Sobre</a></li>
-        <li><a class="item-menu" href="">Contato</a></li>
+        <li><a class="item-menu" href="">PROJETOS</a></li>
+        <li><a class="item-menu" href="">EXPERIÊNCIA</a></li>
+        <li><a class="item-menu" href="">SOBRE</a></li>
+        <li><a class="item-menu" href="">CONTATO</a></li>
         <li><a href=""><i class="fa-solid fa-language"></i> </a></li>
         <li><button class="botao-tema" onclick="alterarTema()"><i class="fa-solid fa-moon"></i></button></li>
     </ul>
@@ -26,7 +27,7 @@
   <main>
 <div id="img-inicio"><img src="assets/img/img-inicio.png" alt=""></div>
 <section id="texto-inicio"><h1>Desenvolvedor </br> <i class="back-end"> Back-End </i></h1><p> Olá, me chamo Renan Rodrigues e estou constantemente aprendendo e aperfeiçoando meus conhecimentos para unir performance e usabilidade.</p>
-    <button class="fale-cmg"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 1rem;"></i>FALE COMIGO</button>
+    <button class="fale-cmg"><a href="#"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 1rem;"></i>FALE COMIGO </a></button>
  <div class="container-icons-social">
     <a class="social-icon" href="https://www.linkedin.com/seu-perfil" target="_blank">
         <i class="fa-brands fa-linkedin"></i>
@@ -42,28 +43,37 @@
 </div>
  </section>
 
- <section class="container">
-    <div class="wrapper">
-        <div class="lista">
-            <div class="item"><i class="devicon-html5-plain"></i></div>
-            <div class="item"><i class="devicon-css3-plain"></i></div>
-            <div class="item"><i class="devicon-javascript-plain"></i></div>
-            <div class="item"><i class="devicon-php-plain"></i></div>
-            <div class="item"><i class="devicon-mysql-plain"></i></div>
-            <div class="item"><i class="devicon-postgresql-plain"></i></div>
-            <div class="item"><i><i class="devicon-java-plain"></i></i></div>
+
+    <section class="container">
+        <div class="wrapper">
+            <div class="lista">
+                <div class="item"><i class="devicon-html5-plain"></i></div>
+                <div class="item"><i class="devicon-css3-plain"></i></div>
+                <div class="item"><i class="devicon-javascript-plain"></i></div>
+                <div class="item"><i class="devicon-php-plain"></i></div>
+                <div class="item"><i class="devicon-mysql-plain"></i></div>
+                <div class="item"><i class="devicon-postgresql-plain"></i></div>
+                <div class="item"><i class="devicon-java-plain"></i></div>
+            </div>
+            <div class="lista" aria-hidden="true">
+                <div class="item"><i class="devicon-html5-plain"></i></div>
+                <div class="item"><i class="devicon-css3-plain"></i></div>
+                <div class="item"><i class="devicon-javascript-plain"></i></div>
+                <div class="item"><i class="devicon-php-plain"></i></div>
+                <div class="item"><i class="devicon-mysql-plain"></i></div>
+                <div class="item"><i class="devicon-postgresql-plain"></i></div>
+                <div class="item"><i class="devicon-java-plain"></i></div>
+            </div>
         </div>
-        <div class="lista" aria-hidden="true">
-            <div class="item item1"><i class="devicon-html5-plain"></i></div>
-            <div class="item"><i class="devicon-css3-plain"></i></div>
-            <div class="item"><i class="devicon-javascript-plain"></i></div>
-            <div class="item"><i class="devicon-php-plain"></i></div>
-            <div class="item"><i class="devicon-mysql-plain"></i></div>
-            <div class="item"><i class="devicon-postgresql-plain"></i></div>
-            <div class="item"><i><i class="devicon-java-plain"></i></i></div>
-        </div>
-    </div>
+    </section>
+
+    <section id="grid-habilidades">
+        <div class="card-um-hab"><h1>BACK-END</h1><h2></h2><p></p></div>
+        <div class="card-dois-hab"><h1>BANCO DE DADOS</h1><h2></h2><p></p></div>
+    <div class="card-tres-hab"><h1>VERSIONAMENTO</h1><h2></h2><p></p></div>
+
 </section>
+
  
 </main>
   <footer>

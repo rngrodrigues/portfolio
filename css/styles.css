@@ -1,41 +1,49 @@
 
 body {
 background-color: #ffffff;
-color: rgb(0, 0, 0);
+color: black;
 transition: background-color 2s, color 2s;
 }
 .modo-escuro {
     background-color: black;
-    color:  lightgray;
+    color: lightgray;
 }
 header {
     position: fixed;
-    top: 2vh;
+    top: 1.5vh;
     left: 50%; 
     transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(3rem);
-    box-shadow: 0 0 0 0.7px gray;
+}
+@media (max-width: 1180px) {
+    .navbar {
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5rem);
+  
+    }
 }
 
 .navbar {
-    width: 55rem;
-    height: 6rem;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    height: 3rem;
 }
-.logo {
-    color: #445f80;
-    text-shadow: 1px 1px 0px #728bad, 2px 2px 0px #a0b4cc;
+#menu .logo {
+    padding-left: 5rem;
+    margin-right: auto;
     font-size: clamp(3rem, 2vh, 6rem);
     font-weight: bold;
 }
-li {
-    font-size: clamp(1rem, 1.5vh, 2rem);
+#menu li {
+    font-size: clamp(1.2rem, 1.5vh, 1.5rem);
     padding: 1rem; 
 }
+#menu li:last-child{
+    padding-right: 5rem;
+}
+
  .botao-tema {
        font-size: 2rem;
        color: black;
@@ -69,7 +77,7 @@ top: -1rem;
     width: 100%;
 }
 main {
-    height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,15 +86,15 @@ main {
     max-width: 150rem;
 }
 #img-inicio {
-    padding-top: 9rem;
     display: flex;
     justify-content: center;
-    height: 45vh;
-    max-width: 100%;
+  height: 45vh;
+
 }
 #img-inicio img{
  max-height: 100%;
- width: clamp(350px, 50vw, 100%);
+ width: clamp(100%, 35vw, 100%);
+
 }
 
 #texto-inicio {
@@ -95,29 +103,29 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 45vh;
+    min-height: 45vh;
 }
 #texto-inicio h1 {
-    font-size: clamp(5rem, 8vw, 10rem);
+    font-size: clamp(5rem, 10vw, 11rem);
     margin-bottom: 3rem;
 }
 #texto-inicio p:first-of-type {
-    font-size: clamp(1.5rem, 2.5vw, 3rem);
-    max-width: 100rem;
+    font-size: clamp(1.5rem, 2.5vw, 3.5rem);
+    max-width: 120rem;
     margin-bottom: 3rem;
     padding: 0 0.4rem 0 0.4rem;
+
 }
-.back-end {
-    color: #445f80;
-    text-shadow: 2px 2px 0px #728bad, 2px 2px 0px #a0b4cc;
-}
+
 
 .fale-cmg {
     font-weight: bold;
-    color: #445f80;
     padding: 1rem;
     font-size: clamp(1rem, 2vw, 1.5rem);
     border-radius: 5px;
+}
+.fale-cmg i {
+    cursor: pointer;
 }
 
 .fa-arrow-up-right-from-square {
@@ -139,7 +147,7 @@ main {
 }
 
 .social-icon {
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: clamp(3rem, 3vw, 4rem);
     padding: 0.8rem;
     display: inline-block;
 }
@@ -156,7 +164,7 @@ main {
 
 .social-icon:hover .fa-github {
     color: white; 
-    text-shadow: 1px 1px 0px #728bad, 2px 2px 0px #a0b4cc;
+    text-shadow: 1px 1px 0px black, 2px 2px 0px black;
     
 }
 
@@ -164,11 +172,12 @@ main {
     color: #25D366; 
 }
 .container {
-    max-width: 870px;
+    display: flex;
+    align-items: center;
+    max-width: 825px;
     overflow: hidden;
     width: 100%;
-    height: 10vh;
-margin-bottom: 5rem;
+    min-height: 10vh;
 
 }
 
@@ -182,11 +191,10 @@ margin-bottom: 5rem;
     gap: 20px;
 }
 .item {
-margin: 20px;
+margin: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #445f80;
     font-size: 60px;
     border-radius: 10px;
 }
@@ -198,6 +206,20 @@ margin-left: 20px;
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
 }
+#grid-habilidades {
+
+width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(37.5rem, 1fr));
+        gap: 2rem; 
+}
+#grid-habilidades div {
+    margin: 3rem 1rem 3rem 1rem;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid black;
+  }
+
 
   
 
