@@ -17,7 +17,7 @@ function alterarTema() {
 window.addEventListener("scroll", () => {
     const menu = document.getElementById("menu");
 
-    if (window.scrollY > 70) {
+    if (window.scrollY > 0) {
         menu.classList.add("scrolled");
     } else {
         menu.classList.remove("scrolled");
