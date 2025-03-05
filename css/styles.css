@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 body {
     background: white;
-
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
 color: #444;
 transition: background-color 1s, color 1s;
 }
@@ -9,6 +11,7 @@ transition: background-color 1s, color 1s;
     color: lightgray;
 }
 header {
+    display: none;
     z-index: 2;
     position: fixed;
     top: 1.5vh;
@@ -20,10 +23,11 @@ header {
 }
 @media (max-width: 1180px) {
     header {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.3);
         backdrop-filter: blur(1rem);
     }
 }
+
 .navbar {
     width:100%;
     display: flex;
@@ -33,6 +37,7 @@ header {
     height: 3rem; 
 }
 .scrolled {
+    border-radius: 10px;
     max-width: 50rem;
     justify-content: center;
     padding: 1rem;
@@ -116,7 +121,7 @@ main {
 
 }
 .back-end {
-    font-style: italic;
+
     display: block;
 color: #395f91;
 
@@ -150,15 +155,14 @@ color: #395f91;
     border-radius: 0.7rem;
     margin-bottom:1rem;
     padding: 1rem;
-    border: 0.1rem solid #395f91;
-    box-shadow: 0 0 0.3rem  #395f91;
+    border: 0.1rem solid gray;
+    box-shadow: 0 0 0.3rem  gray;
     transition: box-shadow 0.2s ease;
 
-    color: #395f91;
     
 }
 .fale-cmg:hover {
-    box-shadow: 0 0 2rem #395f91;
+    box-shadow: 0 0 2rem gray;
 
 }
 
@@ -249,8 +253,6 @@ align-items: center;
 justify-content: center;
 width: 100%;
 padding:  5rem 1rem 5rem 1rem;
-
-
 }
 #habilidades div {
     display: flex;
@@ -262,8 +264,9 @@ padding:  5rem 1rem 5rem 1rem;
     padding: 2rem;
     border: 1px solid gray;
     box-shadow: 0 0 5px 1px gray;
-
-
+    border-radius: 10px;
+    width: 100%;
+    text-align: left;
 }
 #habilidades .div-noturno {
     background-color: #181716;
@@ -272,15 +275,12 @@ padding:  5rem 1rem 5rem 1rem;
 #habilidades {
     flex-direction: column;
 }
-#habilidades div {
-    width: 100%;
-    text-align: left;
-}
+
 }
 #habilidades div h1 {
     text-transform: uppercase;
     color: #395f91;
-    font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
     margin-bottom: 0.5rem;
 }
 #habilidades div h2 {
@@ -289,9 +289,8 @@ padding:  5rem 1rem 5rem 1rem;
     margin-bottom: 3rem;
 }
 #habilidades div p {
-    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
     margin-bottom: 2rem;
-
 }
 #habilidades div a {
     text-underline-offset: 0.3rem;
@@ -313,7 +312,6 @@ width: 100%;
 
 }
 .subtitulo-projetos {
-    
     width: 100%;
     font-size:clamp(1.5rem, 2vw, 3rem);
     text-align: center;
@@ -321,26 +319,89 @@ width: 100%;
 }
 #grid-projetos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    gap: 50px;
-    border-radius: 2%;
+    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+    gap: 5rem;
     max-width: 150rem;  
     margin: 1rem;
     padding: 1rem;
-    
 }
-@media (max-width: 470px) {
-    #grid-projetos {
-        grid-template-columns: 1fr;
-    }
+.div-grid {
+    position: relative;
+    border-radius: 5%; 
+}
+.texto-grid{
+
+    position: absolute;
+    left:0;
+    bottom: 0rem;
+    width: 100%;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    transform: translateY(50%) scale(0.8);
+    transition: opacity 0.4s ease, transform 0.4s ease-in-out;
+}
+.div-grid:hover .texto-grid {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+.titulo-grid {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #395f91;
+    font-size: clamp(1.7rem, 2vw, 2.3rem);
+    padding-bottom: 1.2rem;
+}
+.titulo-grid i {
+    padding-left: 1.2rem;
+}
+.titulo-grid i:first-child {
+    margin-left: auto;
+}
+.paragrafo-grid {
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    padding-bottom: 1.2rem;
+
+}
+.deploy-grid {
+
+    font-size: clamp(1rem, 2vw, 1.5rem);
+margin-right: 1.2rem;
+padding: 0.3rem;
+text-underline-offset: 0.3rem;
+    text-decoration: underline;
+}
+.codigo-grid {
+
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding: 0.3rem;
+    text-underline-offset: 0.3rem;
+    text-decoration: underline;
 }
 
-
-.grid-div img {
+.div-grid img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
-  border-radius: 10%;
+  border-radius: 5%; 
 }
 
-
+.titulo-exp {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 5rem 0 1rem 0;
+}
+.subtitulo-exp {
+    color: #395f91;
+text-align: center;
+font-size: 2.8rem;
+padding-bottom: 1rem;
+}
+.paragrafo-exp {
+text-align: center;
+max-width: 50rem;
+font-size: 2rem;
+margin: 0 auto;
+padding-bottom: 5rem;
+}
