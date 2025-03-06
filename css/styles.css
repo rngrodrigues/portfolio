@@ -1,17 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+:root {
+    --cor-azul: #395f91;
+  }
 body {
-    background: white;
+    background: #EAEAEA;
     font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
-color: #444;
+    font-weight: 150;
+color: black;
 transition: background-color 1s, color 1s;
 }
 .modo-escuro {
-    background: black;
-    color: lightgray;
+    background:   #000;
+    color: white;
 }
 header {
-    display: none;
+  
     z-index: 2;
     position: fixed;
     top: 1.5vh;
@@ -37,7 +40,6 @@ header {
     height: 3rem; 
 }
 .scrolled {
-    border-radius: 10px;
     max-width: 50rem;
     justify-content: center;
     padding: 1rem;
@@ -47,7 +49,7 @@ header {
     transition: box-shadow 1s ease-in-out, padding 0.8s ease-out, background-color 1s ease;
 }
 #menu .logo {
-    color: #395f91;
+    color: var(--cor-azul);
     padding-left: 5rem;
 margin-right: auto;
     font-size: clamp(3rem, 2vh, 5rem);
@@ -101,10 +103,6 @@ top: -1rem;
     width: 100%;
 }
 main {
-
-    align-items: center;
-
-    flex-wrap: wrap;
     margin: 0 auto;
     max-width: 150rem;
 }
@@ -121,10 +119,8 @@ main {
 
 }
 .back-end {
-
-    display: block;
-color: #395f91;
-
+    display: block; 
+    color: var(--cor-azul);
 }
 
 #texto-inicio {
@@ -141,7 +137,7 @@ color: #395f91;
     margin-bottom: 3rem;
 }
 #texto-inicio p:first-of-type {
-    font-size: clamp(1.4rem, 2.5vw, 2.4rem);
+    font-size: clamp(1.4rem, 2.5vw, 2.5rem);
     max-width: 100rem;
     margin-bottom: 3rem;
     padding: 0 0.4rem 0 0.4rem;
@@ -150,22 +146,20 @@ color: #395f91;
 
 .fale-cmg {
     font-weight: bold;
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--cor-azul);
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
     margin-top: 1rem;
     border-radius: 0.7rem;
     margin-bottom:1rem;
     padding: 1rem;
-    border: 0.1rem solid gray;
+    border: 0.1rem solid var(--cor-azul);
     box-shadow: 0 0 0.3rem  gray;
     transition: box-shadow 0.2s ease;
-
-    
 }
 .fale-cmg:hover {
-    box-shadow: 0 0 2rem gray;
+    box-shadow: 0 0 1.5rem var(--cor-azul);
 
 }
-
 .social-icon {
     font-size: clamp(2rem, 3vw, 3rem);
     padding: 0.8rem;
@@ -197,7 +191,7 @@ color: #395f91;
     justify-content: center;
     max-width: 150rem;
 }
-.container {
+.div-icons-lang {
     display: flex;
 align-items: center;
     max-width: 825px;
@@ -263,13 +257,14 @@ padding:  5rem 1rem 5rem 1rem;
     margin: 1rem;
     padding: 2rem;
     border: 1px solid gray;
-    box-shadow: 0 0 5px 1px gray;
     border-radius: 10px;
-    width: 100%;
+ width: 100%;
     text-align: left;
 }
 #habilidades .div-noturno {
+    box-shadow: none;
     background-color: #181716;
+
 }
 @media (max-width:900px) {
 #habilidades {
@@ -278,8 +273,7 @@ padding:  5rem 1rem 5rem 1rem;
 
 }
 #habilidades div h1 {
-    text-transform: uppercase;
-    color: #395f91;
+    color: var(--cor-azul);
     font-size: clamp(1.5rem, 2.5vw, 2.5rem);
     margin-bottom: 0.5rem;
 }
@@ -293,6 +287,7 @@ padding:  5rem 1rem 5rem 1rem;
     margin-bottom: 2rem;
 }
 #habilidades div a {
+    max-width: 6rem;
     text-underline-offset: 0.3rem;
     text-decoration: underline;
     font-weight: bold;
@@ -301,11 +296,11 @@ padding:  5rem 1rem 5rem 1rem;
 }
 
 .card-hab-escuro {
-    background-color: #181716;
+    background-color: #000;
 }
 .titulo-projetos {
-    color: #395f91;
-    font-size: clamp(2rem, 12vw, 7rem);
+    color: var(--cor-azul);
+    font-size: clamp(2rem, 5vw, 5rem);
 margin-bottom:0.5rem;
 text-align: center;
 width: 100%;
@@ -313,7 +308,7 @@ width: 100%;
 }
 .subtitulo-projetos {
     width: 100%;
-    font-size:clamp(1.5rem, 2vw, 3rem);
+    font-size:clamp(1.5rem, 2vw, 2rem);
     text-align: center;
     margin-bottom:4rem;
 }
@@ -326,8 +321,11 @@ width: 100%;
     padding: 1rem;
 }
 .div-grid {
+    box-shadow: 0 3px 10px;
     position: relative;
     border-radius: 5%; 
+    overflow: hidden;
+    background-color: var(--cor-azul);
 }
 .texto-grid{
 
@@ -341,6 +339,9 @@ width: 100%;
     transform: translateY(50%) scale(0.8);
     transition: opacity 0.4s ease, transform 0.4s ease-in-out;
 }
+.texto-grid-noturno {
+    background-color: rgba(0, 0, 0, 0.9);
+}
 .div-grid:hover .texto-grid {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -348,9 +349,8 @@ width: 100%;
 .titulo-grid {
     display: flex;
     align-items: center;
-    text-transform: uppercase;
-    color: #395f91;
-    font-size: clamp(1.7rem, 2vw, 2.3rem);
+    color: var(--cor-azul);
+    font-size: clamp(1.7rem, 2vw, 2.7rem);
     padding-bottom: 1.2rem;
 }
 .titulo-grid i {
@@ -391,9 +391,10 @@ text-underline-offset: 0.3rem;
     text-align: center;
     font-size: 1.5rem;
     padding: 5rem 0 1rem 0;
+
 }
 .subtitulo-exp {
-    color: #395f91;
+color: var(--cor-azul);
 text-align: center;
 font-size: 2.8rem;
 padding-bottom: 1rem;
@@ -404,4 +405,60 @@ max-width: 50rem;
 font-size: 2rem;
 margin: 0 auto;
 padding-bottom: 5rem;
+
+}
+
+.time-line {
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
+
+}
+.time-line:after {
+    content: "";
+    position: absolute;
+    right: 50%;
+    height: 100%;
+    width: 5px;
+    background-color: gray;
+    top:0;
+    border-radius: 50px;
+}
+.container-time-line {
+max-width: 50%;
+position: relative;
+padding:0 5rem 0 5rem;
+height: 250px;
+
+}
+.container-time-line:nth-child(even) {
+    right: -50%;
+}
+
+.text-content {
+    min-height: 15rem;
+    padding: 2rem;
+    box-shadow: 0 2px 10px ;
+    border-radius: 1rem;
+    background-color: white;
+
+}
+.text-content h2 {
+    font-size: clamp(1.2rem, 2vw, 1.8rem)
+}
+.text-content p {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+
+}
+@media(max-width:768px) {
+    .container-time-line {
+        max-width: 100%; 
+    }
+    .container-time-line:nth-child(even) {
+        right: 0;
+    } 
+    .time-line:after {
+        left: 1rem;
+    }
+   
 }

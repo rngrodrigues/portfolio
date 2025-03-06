@@ -3,6 +3,7 @@ function alterarTema() {
     const menu = document.getElementById("menu");
 
     body.classList.toggle("modo-escuro");
+    document.querySelectorAll('.texto-grid').forEach(el => el.classList.toggle('texto-grid-noturno'));
     if (menu.classList.contains("scrolled") && body.classList.contains("modo-escuro")) {
         menu.classList.add("scrolled-escuro");
     } else {
@@ -11,6 +12,7 @@ function alterarTema() {
     document.querySelectorAll(".card-hab").forEach(el => {
         el.classList.toggle("card-hab-escuro");
     });
+    document.querySelectorAll(".")
 }
 
 
