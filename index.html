@@ -9,24 +9,25 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="header finisher-header" style="width: 100%; height: 50%;">
     <header id="menu" >
 <nav>
     
     <ul class="navbar">
-        <li class="logo"><a href="#img-inicio">RR </a></li>
+        <li class="logo"><a href="#inicio">RR </a></li>
         <li><a class="item-menu" href="#projetos">PROJETOS</a></li>
         <li><a class="item-menu" href="#experiencia">EXPERIÊNCIA</a></li>
         <li><a class="item-menu" href="#sobre">SOBRE</a></li>
-        <li><a class="item-menu" href="#">CONTATO</a></li>
+        <li><a class="item-menu" href="#contato">CONTATO</a></li>
         <li><a href=""><i class="fa-solid fa-language"></i> </a></li>
-        <li><button class="botao-tema" onclick="alterarTema()"><i class="fa-solid fa-moon"></i></button></li>
+        <li><button id="toggleTheme" class="botao-tema" onclick="alterarTema()"><i class="fa-solid fa-moon"></i></button></li>
     </ul> 
+
 </nav>
     </header>
   <main>
     <div class="max-width-container"> 
-<div id="img-inicio"><img src="assets/img/img-inicio.png" alt=""></div>
+<div id="inicio" class="img-inicio"><img src="assets/img/img-inicio.png" alt=""></div>
 <section id="texto-inicio"><h1>Desenvolvedor  <span class="back-end" data-text="Back-End"> Back-End </span></h1><p> Olá, me chamo Renan Rodrigues, estou constantemente aprendendo e aperfeiçoando meus conhecimentos para unir performance e usabilidade.</p>
    
  <div class="container-icons-social">
@@ -58,15 +59,7 @@
                 <div class="item"><i class="devicon-postgresql-plain" title="PSql"></i><span>PostgreSQL</span></div>
                 <div class="item"><i class="devicon-java-plain" title="Java"></i><span>Java</span></div>
             </div>
-            <div class="lista" aria-hidden="true">
-                <div class="item"><i class="devicon-html5-plain" title="HTML5"></i><span>HTML5</span></div>
-                <div class="item"><i class="devicon-css3-plain" title="CSS3"></i><span>CSS3</span></div>
-                <div class="item"><i class="devicon-javascript-plain" title="Java Script"></i><span>Java Script</span></div>
-                <div class="item"><i class="devicon-php-plain" title="PHP"></i><span>PHP</span></div>
-                <div class="item"><i class="devicon-mysql-plain" title="MySql"></i><span>MySQL</span></div>
-                <div class="item"><i class="devicon-postgresql-plain" title="PSql"></i><span>PostgreSQL</span></div>
-                <div class="item"><i class="devicon-java-plain" title="Java"></i><span>Java</span></div>
-            </div>
+            
         </div>
     </div>
 </div>
@@ -81,7 +74,8 @@
 
 
 <div id="grid-projetos">
-<div class="div-grid"><img src="assets/img/projeto1.png" alt=""> <div class="texto-grid">
+<div  class="div-grid"><img src="assets/img/projeto1.png" alt=""> 
+    <div class="texto-grid">
     <h2 class="titulo-grid">Titulo Projeto <i class="devicon-html5-plain" title="HTML5"></i> <i class="devicon-javascript-plain"></i> <i class="devicon-css3-plain"></i></h2>
     <p class="paragrafo-grid">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ad amet rem unde sit, quo iste iusto provident ea sed nihil.</p>
     <a href="#" class="deploy-grid"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.5rem;"></i>Ver projeto</a><a href="#" class="codigo-grid"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.5rem;"></i>Código</a></div>
@@ -113,11 +107,12 @@
 </div>
 </div> 
 </div>
-<h2 id="experiencia" class="titulo-exp">EXPERIÊNCIA</h2><h3 class="subtitulo-exp">Aprendizados ao longo do tempo</h3><p class="paragrafo-exp">Um pouco das minhas vivências, conhecimentos e contato com programação.</p>
+
+<h2  id="experiencia" class="titulo-exp">EXPERIÊNCIA</h2><h3 class="subtitulo-exp">Aprendizados ao longo do tempo</h3><p class="paragrafo-exp">Um pouco das minhas vivências, conhecimentos e contato com programação.</p>
 
 <section class="time-line">
 <div class="container-time-line">
-    <div class="text-content">
+    <div class="time-line-content">
         <h2>
             Formação .NET (SENAC)
             <span>2021-2022</span>
@@ -126,7 +121,7 @@
     </div>
 </div>
 <div class="container-time-line">
-    <div class="text-content">
+    <div class="time-line-content">
         <h2> Aprendiz Tecnologia (Stefanini IT)
             <span>2022-2024</span>
         </h2>
@@ -134,7 +129,7 @@
     </div>
 </div>
 <div class="container-time-line">
-    <div class="text-content">
+    <div class="time-line-content">
         <h2> Seviços Administrativos (SENAC)
             <span>2022-2024</span>
         </h2>
@@ -143,7 +138,7 @@
     </div>
 </div>
 <div class="container-time-line">
-    <div class="text-content">
+    <div class="time-line-content">
         <h2>
             Análise e Desenvolvimento de Sistemas (Estácio)
             <span>2024-2026</span> 
@@ -154,10 +149,36 @@
 </div>
 </section>
 
-<section id="sobre"><h2 class="titulo-sobre">Algumas palavras sobre mim</h2><p class="paragrafo-sobre">Olá! Me chamo Renan Rodrigues e sou um estudante de programação. Meu principal interesse está no desenvolvimento back-end, mas também admiro a área de UX/UI, pois acredito que a tecnologia deve ser funcional e intuitiva. Atualmente, estou focado em melhorar meus conhecimentos em Python e Java, busco sempre aprender novas tecnologias.</p><p class="paragrafo-sobre-dois">No meu tempo livre, gosto de correr para melhorar meu desempenho, ir à academia para manter uma rotina saudável e jogar um fifa de vez em quando.</p> <div id="img-sobre"><img src="assets/img/img-inicio.png" alt=""></div></section>
+<section id="sobre">
+    <div class="sobre-flex">
+    <div id="img-sobre"><img src="assets/img/img-inicio.png" alt=""></div> <div class="conteudo-sobre"> <h2 class="titulo-sobre">Algumas palavras sobre mim</h2><p class="paragrafo-sobre">Olá! Me chamo Renan Rodrigues e 
+        sou um estudante de programação. Meu principal interesse está no desenvolvimento back-end, e área de UX/UI.</p> <p class="paragrafo-sobre">Atualmente, estou focado em melhorar meus conhecimentos em Python e Java, busco sempre aprender no
+        vas tecnologias.</p><p class="paragrafo-sobre">No meu tempo livre, gosto de correr para melhorar meu desempenho, ir à academia para manter uma rotina saudável e jogar um fifa de vez em quando.</p> 
+        <div class="container-icons-sobre">
+            <a class="social-icon" href="https://www.linkedin.com/seu-perfil" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            
+            <a class="social-icon" href="https://github.com/seu-usuario" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            
+            <a class="social-icon" href="https://wa.me/seunumerocomddd" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>   
+            </a>
+        </div>
+    </div></section>
+</div>
 <section id="contato">
-    <h2 class="titulo-contato">Contato</h2>
-    <p class="paragrafo-contato">Se interessou? Entre em contato!</p>
+<div class="container-contato">
+<h2 class="titulo-container-ctt">Vamos trabalhar juntos!</h2>
+<p class="infos-container-ctt"><i class="fas fa-map-marker-alt"></i> Brasil, Rio de Janeiro</p>
+<p class="infos-container-ctt"><i class="fas fa-phone-alt"></i> +55 (21) 97633-3733</p>
+<p class="infos-container-ctt"><i class="fas fa-envelope"></i> devrenanrodrigues@gmail.com</p>
+<div class="div-btn-ctt"><button class="fale-cmg-ctt">Fale comigo</button></div>
+</div>
+    <div class="card-contato">
+    <h2 class="titulo-card-ctt">Entre em contato</h2>
     <form action="#" method="post">
         <label for="nome"></label>
         <input type="text" id="nome" name="nome" placeholder="Nome" required >
@@ -166,15 +187,19 @@
         <input type="email" id="email" name="email" placeholder="Email" required>
 
         <label for="mensagem"></label>
-        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
-
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Mensagem" required></textarea>
+        
         <button type="submit">Enviar</button>
     </form>
+</div>
 </section>
-
 </main>
   <footer>
-  </footer>   
+    <section class="social"></section>
+    <section class="contato"></section>
+    <section class="conectar"></section>
+  </footer>  
+  <script src="finisher-header.es5.min.js" type="text/javascript"></script> 
   <script src="js/main.js"></script>
 </body>
 
