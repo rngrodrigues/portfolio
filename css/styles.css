@@ -19,18 +19,20 @@ transition: background-color 0.5s, color 0.5s;
 header {
     z-index: 2;
     position: fixed;
-    top: 1.5vh;
+    top: 0.5vh;
     max-width: 1500px;
     margin: 0 auto;
     left: 0;
     right: 0;
     transition: box-shadow 1s ease-in-out, padding 0.8s ease-out;
 }
-@media (max-width: 1080px) {
-    header {
-        background-color: rgba(255, 255, 255, 0.5);
+
+    @media (min-width: 769px) and (max-width: 930px) {
+        header {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
     }
-}
+
 
 .navbar {
     width:100%;
@@ -38,35 +40,48 @@ header {
     align-items: center;
     justify-content: center;
     font-weight: bold;
-
+    height: 3rem; 
+}
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.menu-items {
+    display: flex;
+    align-items: center;
+}
+.buttons {
+    display: flex;
+    align-items: center;
 }
 .scrolled {
     max-width: 50rem;
+margin: 0 auto;
     justify-content: center;
     padding: 1rem;
     color: black;
-    background-color: whitesmoke;
+    background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 0 0 0.7px gray;
     transition: box-shadow 1s ease-in-out, padding 0.8s ease-out, background-color 1s ease;
 }
 #menu .logo {
     color: var(--cor-azul);
-    padding-left: 5rem;
+
 margin-right: auto;
     font-size: clamp(3rem, 2vh, 5rem);
     font-weight: bold;
 }
 #menu li {
-    font-size: clamp(1rem, 1.5vh, 1.2rem);
+    font-size: clamp(1.2rem, 1.5vh, 1.3rem);
     padding: 1rem; 
 
 }
-#menu li:last-child{
-    padding-right: 5rem;
-}
+
 
 .scrolled-escuro {
-    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+
     color: white;
     transition: background-color 1s ease, padding 0.8s ease-out;
 }
@@ -102,6 +117,44 @@ top: -1rem;
 .item-menu:hover:after,
 .item-menu:hover:before {
     width: 100%;
+}
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .menu-toggle i {
+        font-size: clamp(3rem, 2vh, 5rem);
+       
+    }
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 5.5rem;
+        box-shadow: 0 0 0 0.8px gray;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.9);
+    }
+    .menu-items li:first-child {
+margin-top: 1rem;
+    }
+    .menu-items-escuro {
+        background: rgba(0, 0, 0, 0.7);
+    }
+    
+    .menu-items.active {
+        display: flex;
+        
+    }
+    
+    .menu-items li {
+        padding: 1rem;
+    }
+    .buttons {
+        margin-top: 1rem;
+    }
+    
 }
 
 .img-inicio {
@@ -306,7 +359,7 @@ background-color: whitesmoke;
 }
 #projetos {
 border-radius: 25px;
-    padding: 5rem 0 5rem 0;
+    padding-bottom:5rem;
     transition: background-color 1s ease;
 }
 .titulo-projetos {
@@ -345,7 +398,7 @@ width: 100%;
     left:2rem;
     right: 2rem;
     bottom: 2rem;
-border-radius: 1rem;
+
     opacity: 0;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 1.5rem;
@@ -448,7 +501,6 @@ margin-bottom: 5rem;
 max-width: 50%;
 position: relative;
 padding:0 5rem 0 5rem;
-
 animation: scroll-animation 10s ease-in-out;
 animation-timeline: view();
 animation-range: entry 0% cover 50%;
@@ -567,6 +619,7 @@ margin-bottom: 2rem;
     align-items: center;
     max-width: 150rem;
     margin: 5rem auto;
+    position: relative;
 }
 @media (max-width:768px) {
     #contato {
@@ -610,14 +663,21 @@ form button:hover {
     margin-right: 15rem;
 
 }
+
 @media (max-width:768px){
     .container-contato {
         margin-right: 0;
         margin-bottom: 4rem;
     }
+    .div-btn-ctt {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
 .titulo-container-ctt {
-    font-size:clamp(2rem, 2vw, 2.5rem);
+   
+    font-size:clamp(2.5rem, 2vw, 4rem);
     color: var(--cor-azul);
     margin-bottom:3rem ;
 }
@@ -630,6 +690,7 @@ form button:hover {
     margin-right: 1rem;
 }
 
+
 .fale-cmg-ctt {
     font-size:clamp(1.5rem, 2vw, 2rem);
     border: 1px solid var(--cor-azul);
@@ -641,6 +702,7 @@ form button:hover {
 padding: 0.5rem;
     margin-top: 2.5rem;
 }
+
 form input, form textarea, form button {
     padding: 1rem;
     margin: 0.5rem;
@@ -648,6 +710,7 @@ form input, form textarea, form button {
     border-radius: 0.4rem;
     font-size: 1.6rem;
 }
+
 footer {
     background-color: black;
     background-image: url('https://transparenttextures.com/patterns/fabric-of-squares.png');

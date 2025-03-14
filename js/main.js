@@ -14,6 +14,9 @@ function alterarTema() {
     document.querySelectorAll(".card-hab").forEach(el => {
         el.classList.toggle("card-hab-escuro");
     });
+    document.querySelectorAll(".menu-items").forEach(el => {
+        el.classList.toggle("menu-items-escuro");
+    });
     document.querySelectorAll(".time-line-content").forEach(el => {
         el.classList.toggle("time-line-content-noturno");
     });
@@ -32,7 +35,7 @@ function alterarTema() {
 window.addEventListener("scroll", () => {
     const menu = document.getElementById("menu");
 
-    if (window.scrollY > 0) {
+    if (window.scrollY > 30) {
         menu.classList.add("scrolled");
     } else {
         menu.classList.remove("scrolled");
@@ -43,7 +46,10 @@ window.addEventListener("scroll", () => {
         menu.classList.remove("scrolled-escuro");
     }
 });
-
+function toggleMenu() {
+    const menuItems = document.querySelector(".menu-items");
+    menuItems.classList.toggle("active");
+}
 window.dispatchEvent(new Event("scroll"));
 
 const primeiraLista = document.querySelector(".lista");
