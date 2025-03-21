@@ -2,7 +2,7 @@
 
 
 :root {
-    --cor-azul:darkblue;
+    --cor-azul:#395f91;
   }
 body {
     background-color: white;
@@ -26,34 +26,34 @@ header {
     right: 0;
     transition: box-shadow 1s ease-in-out, padding 0.8s ease-out;
 }
-
     @media (min-width: 769px) and (max-width: 930px) {
         header {
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.8);
         }
     }
-
-
+    
 .navbar {
     width:100%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    height: 3rem; 
+max-height: 3rem;
 }
-.menu-toggle {
+#menu .menu-toggle {
     display: none;
-    font-size: 2rem;
-    cursor: pointer;
+    padding: 0;
 }
 .menu-items {
     display: flex;
     align-items: center;
 }
 .buttons {
-    display: flex;
-    align-items: center;
+    display: flex;   
+}
+.buttons button {
+    font-size: 2rem;
+    margin: 0.5rem;
 }
 .scrolled {
     max-width: 50rem;
@@ -74,94 +74,121 @@ margin-right: auto;
 }
 #menu li {
     font-size: clamp(1.2rem, 1.5vh, 1.3rem);
-    padding: 1rem; 
-
+padding: 1rem;
 }
 
 
 .scrolled-escuro {
-    background: rgba(0, 0, 0, 0.7);
-
+    background: rgba(17, 17, 17, 0.9);
     color: white;
     transition: background-color 1s ease, padding 0.8s ease-out;
 }
 
- .botao-tema {
-       font-size: 2rem;
-       color: black;
-       background-color: white;
-       width: 3rem;
-       border-radius: 1rem;
-       border: 0.1rem solid gray;
-        cursor: pointer;
-   }
+
    .item-menu {
     position: relative; 
    }
-   .item-menu:before, .item-menu:after {
+   .item-menu:before {
     content:"";
     position: absolute;
 height: 0.3rem;
 width: 0;
-background: linear-gradient(45deg, #445f80, #506b8d, #5a7699, #6b84a8, #7b92b7);
-transition: 0.5s;   
+left: 0;
+bottom: -1rem;
+background-color: var(--cor-azul);
+transition: width 0.5s ease-in-out;   
+
 }
-.item-menu:after {
-    left: 0;
-    bottom: -1rem;
-}
-.item-menu:before {
-right: 0;
-top: -1rem;
-}
-.item-menu:hover:after,
 .item-menu:hover:before {
     width: 100%;
 }
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-    .menu-toggle i {
-        font-size: clamp(3rem, 2vh, 5rem);
-       
-    }
-    .menu-items {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 5.5rem;
-        box-shadow: 0 0 0 0.8px gray;
-        left: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.9);
-    }
-    .menu-items li:first-child {
-margin-top: 1rem;
-    }
-    .menu-items-escuro {
-        background: rgba(0, 0, 0, 0.7);
-    }
+    #menu .menu-toggle {
+         display: block;
+         position: relative;
+     }
+ 
+     .toggle-icon {
+         font-size: clamp(3rem, 2vh, 5rem);
+         transition: opacity 0.3s ease, transform 0.3s ease;
+         position: absolute;
+         top: -15px;
+         left: -15px;
+         opacity: 1;
+     }
+ 
+     #close-icon {
+         display: none;
+     }
+ 
+     .menu-toggle.active #menu-icon {
+         opacity: 0; 
+         transform: rotate(45deg); 
+     }
+ 
+     .menu-toggle.active #close-icon {
+         display: block; 
+         opacity: 1;
+         transform: rotate(0deg); 
+     }
+  
+ 
+     .menu-items {
+         display: flex;
+         flex-direction: column;
+         position: absolute;
+         top: 5.5rem;
+         left: 0;
+         width: 100%;
+         background: rgba(255, 255, 255, 0.9);
+         max-height: 0;
+         overflow: hidden;
+         transition: max-height 0.5s ease;
+     }
+ 
+     .menu-items.active {
+         max-height: 300px; 
+     }
+ 
+     .menu-items li:first-child {
+         margin-top: 1rem;
+     }
+ 
+     .menu-items-escuro {
+         background: rgba(17, 17, 17, 0.9);
+     }
+ 
+     .menu-items li {
+         padding: 1rem;
+     }
+ 
+     .buttons {
+         margin-top: 1rem;
+     }
+ 
+     .scrolled {
+         max-width: 100%;
+     }
+ }
+ .icon.sun {
     
-    .menu-items.active {
-        display: flex;
-        
-    }
-    
-    .menu-items li {
-        padding: 1rem;
-    }
-    .buttons {
-        margin-top: 1rem;
-    }
-    
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon.moon {
+    color: #ffffff; 
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon.clicked {
+    transform: rotate(360deg); 
 }
 
 .img-inicio {
     display: flex;
     justify-content: center;
     
-  height: 40vh;
+  height: 35vh;
 
 }
 .img-inicio img{
@@ -178,42 +205,36 @@ margin-top: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
     align-items: center;
     text-align: center;
-    min-height: 40vh;
 }
 #texto-inicio h1 {
     font-size: clamp(2rem, 12vw, 9rem);
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
 }
 #texto-inicio p:first-of-type {
     font-size: clamp(1.4rem, 2.5vw, 2.5rem);
     max-width: 100rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     padding: 0 0.4rem 0 0.4rem;
 
 }
 
-.fale-cmg {
+.btn-padrao {
     font-weight: bold;
     color: white;
-    box-shadow: 0 2px 7px gray;
     font-size: clamp(1.2rem, 2vw, 1.5rem);
-    margin-top: 1rem;
-    border-radius: 0.7rem;
-    margin-bottom:5rem;
-    padding: 1rem;
+    padding: 0.7rem;
     border: 0.1rem solid var(--cor-azul);
+    border-radius: 0.4rem;
     background-color: var(--cor-azul);
-    transition:  background-color 0.5s ease, color 0.5s ease;
+    transition: box-shadow 0.3s ease;
 }
-.fale-cmg:hover {
-
-    background-color: var(--cor-azul);
-    color: white;
-
+.btn-padrao:hover {
+    box-shadow: 0 0 10px gray;
 }
+
 .social-icon {
     font-size: clamp(2rem, 3vw, 3rem);
     padding: 0.8rem;
@@ -244,6 +265,7 @@ margin-top: 1rem;
     align-items: center;
     justify-content: center;
     max-width: 150rem;
+    margin: 3rem auto;
 }
 .max-width-container {
     margin: 0 auto;
@@ -310,8 +332,6 @@ background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 270px;
-    width: 470px;
     margin: 1rem;
     padding: 2rem;
     border: 1px solid gray;
@@ -321,10 +341,10 @@ background-color: whitesmoke;
 }
 #habilidades .card-hab-escuro {
     box-shadow: none;
-    background-color: rgb(38, 38, 38);
+    background-color: #111111;
 
 }
-@media (max-width:900px) {
+@media (max-width:1100px) {
 #habilidades {
     flex-direction: column;
 }
@@ -354,9 +374,6 @@ background-color: whitesmoke;
 
 }
 
-.card-hab-escuro {
-    background-color: #111111;
-}
 #projetos {
 border-radius: 25px;
     padding-bottom:5rem;
@@ -386,7 +403,7 @@ width: 100%;
 
 }
 .div-grid {
-    box-shadow: 0 2px 10px;
+    box-shadow: 0 0 0.8rem;
     position: relative;
     border-radius: 5%; 
     overflow: hidden;
@@ -398,7 +415,7 @@ width: 100%;
     left:2rem;
     right: 2rem;
     bottom: 2rem;
-
+    border-radius: 0.5rem;
     opacity: 0;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 1.5rem;
@@ -407,12 +424,16 @@ width: 100%;
 }
 @media (max-width:768px) {
 .texto-grid {
+    border-radius: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     opacity: 1;
     transform: translateY(0) scale(1);
 }
 }
 .texto-grid-noturno {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(17, 17, 17, 0.9);
 }
 .div-grid:hover .texto-grid {
     opacity: 1;
@@ -484,7 +505,7 @@ margin-bottom: 5rem;
 
 .time-line {
     max-width: 1500px;
-    margin: 10rem auto;
+    margin: 5rem auto;
     position: relative;
 }
 .time-line:after {
@@ -501,7 +522,7 @@ margin-bottom: 5rem;
 max-width: 50%;
 position: relative;
 padding:0 5rem 0 5rem;
-animation: scroll-animation 10s ease-in-out;
+animation: scroll-animation 3s ease-in-out;
 animation-timeline: view();
 animation-range: entry 0% cover 50%;
 }
@@ -529,7 +550,7 @@ transform: translateY(150px);
     height: 200px;
 }
 .time-line-content-noturno {
-    background-color: rgb(22, 21, 21);
+    background-color:#111111;
 }
 .time-line-content h2 {
     color: var(--cor-azul);
@@ -553,10 +574,9 @@ transform: translateY(150px);
    
 }
 #sobre {
-    padding: 5rem 0 5rem 0;
+    padding: 3rem 0 3rem 0;
 background-image: url('https://transparenttextures.com/patterns/brushed-alum-dark.png');
-    background-color: white;
-            
+    background-color: white;       
 transition: background-color 1s ease;
 
 
@@ -582,7 +602,7 @@ padding: 0 3rem ;
 .titulo-sobre {
     color: var(--cor-azul);
 font-weight: bold;
-margin-bottom: 2rem;
+margin-bottom: 3rem;
     letter-spacing: 0.5rem;
     text-transform: uppercase;
     font-weight: bold;
@@ -594,6 +614,9 @@ margin-bottom: 2rem;
  
 margin-bottom: 2rem;
     font-size: clamp(1.5rem, 2vw, 2.5rem);
+}
+.conteudo-sobre p:nth-child(4) {
+    margin-bottom: 3rem;
 }
 
 .conteudo-sobre {
@@ -609,14 +632,11 @@ margin-bottom: 2rem;
 #img-sobre img {
     max-width: 100%;   
 }
-.container-icons-sobre {
-    font-size: clamp(2rem, 5vw, 5rem);
-}
 
 #contato {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     max-width: 150rem;
     margin: 5rem auto;
     position: relative;
@@ -624,33 +644,37 @@ margin-bottom: 2rem;
 @media (max-width:768px) {
     #contato {
     flex-direction: column;
+    align-items: center;
     }
-    
+    .btn-download-cv {
+        width: 100%;
+        text-align: center;
+    }
 }
 .titulo-card-ctt {
 
-    font-size:clamp(1.5rem, 2vw, 2rem);
+    font-size:clamp(1.5rem, 2vw, 3rem);
     text-align: center;
     margin-bottom: 1rem;
 }
 
 
 .card-contato {
+    box-shadow: 0 2px 5px;
     border: 1px solid #ccc;
     padding: 2rem;
     border-radius: 0.4rem;
-
+background: url('https://transparenttextures.com/patterns/binding-dark.png');
 }
 
 .card-contato form {
     display: flex;
     flex-direction: column;
 }
-form button { 
-text-align: center;
-    border-radius: 0.4rem;
-    cursor: pointer;
+form .btn-enviar { 
+    text-align: center;
     transition:  background-color 0.5s ease, color 0.5s ease;
+    border: 1px solid gray;
 }
 form button:hover {
     color: white;
@@ -659,7 +683,6 @@ form button:hover {
 .container-contato {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     margin-right: 15rem;
 
 }
@@ -685,23 +708,16 @@ form button:hover {
     margin-bottom: 1rem;
     font-size:clamp(1.5rem, 2vw, 2rem);
 }
+.fa-envelope {
+    margin-bottom: 3rem;
+}
 .infos-container-ctt i {
     color: var(--cor-azul);
     margin-right: 1rem;
 }
 
 
-.fale-cmg-ctt {
-    font-size:clamp(1.5rem, 2vw, 2rem);
-    border: 1px solid var(--cor-azul);
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    background-color: var(--cor-azul);
-    color: white;
-padding: 0.5rem;
-    margin-top: 2.5rem;
-}
+
 
 form input, form textarea, form button {
     padding: 1rem;

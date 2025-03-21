@@ -15,19 +15,24 @@
             <ul class="navbar">
                 <li class="logo"><a href="#inicio">RR</a></li>
                 <li class="menu-toggle" onclick="toggleMenu()">
-                    <i class="fa-solid fa-bars"></i></li>
-                <div class="menu-items">
-                    <li><a class="item-menu" href="#projetos">PROJETOS</a></li>
-                    <li><a class="item-menu" href="#experiencia">EXPERIÊNCIA</a></li>
-                    <li><a class="item-menu" href="#sobre">SOBRE</a></li>
-                    <li><a class="item-menu" href="#contato">CONTATO</a></li>
-                   <div class="buttons">
-                    <li><a href=""><i class="fa-solid fa-language"></i></a></li>
-                    <li><button id="toggleTheme" class="botao-tema" onclick="alterarTema()">
-                        <i class="fa-solid fa-moon"></i>
-                    </button></li>
-                </div>
-            </div>
+                    <i class="fa-solid fa-bars toggle-icon" id="menu-icon"></i> 
+                    <i class="fa-solid fa-xmark toggle-icon" id="close-icon"></i> 
+                </li>
+                <li class="menu-container">
+                    <ul class="menu-items">
+                        <li><a class="item-menu" href="#projetos">PROJETOS</a></li>
+                        <li><a class="item-menu" href="#experiencia">EXPERIÊNCIA</a></li>
+                        <li><a class="item-menu" href="#sobre">SOBRE</a></li>
+                        <li><a class="item-menu" href="#contato">CONTATO</a></li>
+                        <li class="buttons">
+                            
+                            <button><i class="fa-solid fa-language"></i></button>
+                            <button id="toggleTheme" class="botao-tema" onclick="alterarTema()">
+                                <i class="fas fa-sun icon sun" id="icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
@@ -49,7 +54,7 @@
         <i class="fa-brands fa-whatsapp"></i>   
     </a>
 </div>
-<a href="#" class="fale-cmg"><i class="fa-solid fa-arrow-up-right-from-square pulsar" style="margin-right: 1rem;"></i>FALE COMIGO </a>
+<button href="#" class="btn-padrao"><i class="fa-solid fa-arrow-up-right-from-square pulsar" style="margin-right: 1rem;"></i>Fale comigo</button>
  </section>
 
 <div class="max-width-content">
@@ -87,8 +92,8 @@
     <a href="#" class="deploy-grid"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.5rem;"></i>Ver projeto</a><a href="#" class="codigo-grid"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.5rem;"></i>Código</a></div>
 </div>
 <div class="div-grid"><img src="assets/img/projeto2.png" alt=""><div class="texto-grid">
-    <h2 class="titulo-grid">Titulo Projeto <i class="devicon-html5-plain" title="HTML5"></i> <i class="devicon-javascript-plain"></i> <i class="devicon-css3-plain"></i></h2>
-    <p class="paragrafo-grid">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ad amet rem unde sit, quo iste iusto provident ea sed nihil.</p>
+    <h2 class="titulo-grid">Portfólio <i class="devicon-html5-plain" title="HTML"></i>  <i class="devicon-css3-plain" title="CSS"></i> <i class="devicon-javascript-plain" title="Java Script"></i></h2>
+    <p class="paragrafo-grid">Landing page com meus projetos, habilidades e experiência, desenvolvida com HTML, CSS e JavaScript, priorizei um design limpo e responsivo para uma boa navegação.</p>
     <a href="#" class="deploy-grid"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.5rem;"></i>Ver projeto</a><a href="#" class="codigo-grid"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.5rem;"></i>Código</a></div>
 </div>
 <div class="div-grid"><img src="assets/img/projeto3.png" alt=""><div class="texto-grid">
@@ -160,18 +165,9 @@
     <div id="img-sobre"><img src="assets/img/img-inicio.png" alt=""></div> <div class="conteudo-sobre"> <h2 class="titulo-sobre">Algumas palavras sobre mim</h2><p class="paragrafo-sobre">Olá! Me chamo Renan Rodrigues e 
         sou um estudante de programação. Meu principal interesse está no desenvolvimento back-end, e área de UX/UI.</p> <p class="paragrafo-sobre">Atualmente, estou focado em melhorar meus conhecimentos em Python e Java, busco sempre aprender no
         vas tecnologias.</p><p class="paragrafo-sobre">No meu tempo livre, gosto de correr para melhorar meu desempenho, ir à academia para manter uma rotina saudável e jogar um fifa de vez em quando.</p> 
-        <div class="container-icons-sobre">
-            <a class="social-icon" href="https://www.linkedin.com/seu-perfil" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            
-            <a class="social-icon" href="https://github.com/seu-usuario" target="_blank">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            
-            <a class="social-icon" href="https://wa.me/seunumerocomddd" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i>   
-            </a>
+        <div class="btn-download-cv">
+            <button class="btn-padrao">Download CV</button>
+           
         </div>
     </div>
 </div>
@@ -179,14 +175,14 @@
 
 <section id="contato">
 <div class="container-contato">
-<h2 class="titulo-container-ctt">Vamos trabalhar juntos!</h2>
+<h2 class="titulo-container-ctt">Aguardo o seu contato!</h2>
 <p class="infos-container-ctt"><i class="fas fa-map-marker-alt"></i> Brasil, Rio de Janeiro</p>
 <p class="infos-container-ctt"><i class="fas fa-phone-alt"></i> +55 (21) 97633-3733</p>
 <p class="infos-container-ctt"><i class="fas fa-envelope"></i> devrenanrodrigues@gmail.com</p>
-<div class="div-btn-ctt"><button class="fale-cmg-ctt">Fale comigo</button></div>
+<div class="div-btn-ctt"><button class="btn-padrao"><i class="fa-solid fa-arrow-up-right-from-square pulsar" style="margin-right: 1rem;"></i>Fale comigo</button></div>
 </div>
     <div class="card-contato">
-    <h2 class="titulo-card-ctt">Entre em contato</h2>
+    <h2 class="titulo-card-ctt">Contato</h2>
     <form action="#" method="post">
         <label for="nome"></label>
         <input type="text" id="nome" name="nome" placeholder="Nome" required >
@@ -197,7 +193,7 @@
         <label for="mensagem"></label>
         <textarea id="mensagem" name="mensagem" rows="5" placeholder="Mensagem" required></textarea>
         
-        <button type="submit">Enviar</button>
+        <button class="btn-enviar" type="submit">Enviar</button>
     </form>
 </div>
 
