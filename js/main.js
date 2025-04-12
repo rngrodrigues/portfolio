@@ -67,19 +67,32 @@ window.addEventListener("scroll", () => {
 function toggleMenu() {
     const menuItems = document.querySelector(".menu-items");
     const menuToggle = document.querySelector(".menu-toggle");
+    
+    // Alterna a classe 'active' para abrir/fechar o menu
     menuItems.classList.toggle("active");
     menuToggle.classList.toggle("active");
+
+    // Fechar o menu ao clicar fora
+    document.addEventListener("click", (event) => {
+        if (!menuItems.contains(event.target) && !menuToggle.contains(event.target)) {
+            menuItems.classList.remove("active");
+            menuToggle.classList.remove("active");
+        }
+    });
 }
+
 document.querySelectorAll(".item-menu, .logo").forEach(link => {
     link.addEventListener("click", () => {
         document.querySelector(".menu-items").classList.remove("active");
         document.querySelector(".menu-toggle").classList.remove("active"); 
     });
 });
+
 window.dispatchEvent(new Event("scroll"));
 
 const primeiraLista = document.querySelector(".lista");
 const segundaLista = primeiraLista.cloneNode(true);
 segundaLista.setAttribute("aria-hidden", "true"); 
 document.querySelector(".div-icons-lang .wrapper").appendChild(segundaLista);
+
 

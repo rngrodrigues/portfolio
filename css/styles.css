@@ -2,18 +2,19 @@
 
 
 :root {
-    --cor-azul:#395f91;
+    --cor-azul:#8e3939;
   }
+  
 body {
     background-color: white;
-            background-image: url('https://transparenttextures.com/patterns/45-degree-fabric-light.png');
+            background-image: url('https://transparenttextures.com/patterns/absurdity.png');
     font-family: 'Inter', sans-serif;
 color: black;
 transition: background-color 0.5s, color 0.5s;
 }
 .modo-escuro {
     background: black;
-    background-image: url('https://transparenttextures.com/patterns/dark-denim.png');
+    background-image: url('https://transparenttextures.com/patterns/dark-denim-3.png');
     color: white;
 }
 header {
@@ -25,28 +26,30 @@ header {
     left: 0;
     right: 0;
     transition: box-shadow 1s ease-in-out, padding 0.8s ease-out;
+
 }
-    @media (min-width: 769px) and (max-width: 930px) {
-        header {
-            background-color: rgba(255, 255, 255, 0.8);
-        }
-    }
-    
+  
 .navbar {
     width:100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
 max-height: 3rem;
+
+}
+#menu .menu-container {
+    padding: 0;
 }
 #menu .menu-toggle {
     display: none;
+    color: var(--cor-azul);
     padding: 0;
+    margin-right: 2rem;
 }
 .menu-items {
     display: flex;
     align-items: center;
+
 }
 .buttons {
     display: flex;   
@@ -62,39 +65,44 @@ margin: 0 auto;
     padding: 1rem;
     color: black;
     background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(0.3rem);
     box-shadow: 0 0 0 0.7px gray;
-    transition: box-shadow 1s ease-in-out, padding 0.8s ease-out, background-color 1s ease;
+    transition: box-shadow 1s ease-in-out, padding 0.5s ease-out, background-color 0.5s ease;
 }
 #menu .logo {
     color: var(--cor-azul);
-
 margin-right: auto;
     font-size: clamp(3rem, 2vh, 5rem);
     font-weight: bold;
+    text-shadow: -1px 1px 2px gray;
+
 }
 #menu li {
     font-size: clamp(1.2rem, 1.5vh, 1.3rem);
 padding: 1rem;
-}
 
+}
 
 .scrolled-escuro {
     background: rgba(17, 17, 17, 0.9);
+    backdrop-filter: blur(0.3rem);
     color: white;
-    transition: background-color 1s ease, padding 0.8s ease-out;
+    transition: background-color 0.5s ease, padding 0.5s ease-out;
 }
 
 
    .item-menu {
+    font-weight:bold;
     position: relative; 
    }
    .item-menu:before {
     content:"";
     position: absolute;
-height: 0.3rem;
+height: 0.2rem;
 width: 0;
 left: 0;
-bottom: -1rem;
+border-radius: 50%;
+bottom: -0.5rem;
 background-color: var(--cor-azul);
 transition: width 0.5s ease-in-out;   
 
@@ -134,6 +142,7 @@ transition: width 0.5s ease-in-out;
   
  
      .menu-items {
+       
          display: flex;
          flex-direction: column;
          position: absolute;
@@ -156,6 +165,7 @@ transition: width 0.5s ease-in-out;
  
      .menu-items-escuro {
          background: rgba(17, 17, 17, 0.9);
+
      }
  
      .menu-items li {
@@ -171,12 +181,11 @@ transition: width 0.5s ease-in-out;
      }
  }
  .icon.sun {
-    
+font-weight: normal;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .icon.moon {
-    color: #ffffff; 
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -187,8 +196,8 @@ transition: width 0.5s ease-in-out;
 .img-inicio {
     display: flex;
     justify-content: center;
-    
-  height: 35vh;
+    margin-top: 3rem;
+     height: 35vh;
 
 }
 .img-inicio img{
@@ -196,10 +205,19 @@ transition: width 0.5s ease-in-out;
 
 }
 .back-end {
-    color: var(--cor-azul);
     display: block; 
-
+    position: relative;
 }
+.back-end:before {
+    content: '';
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    height: 2px;
+    width: 50%;
+    background-color: var(--cor-azul);
+}
+
 
 #texto-inicio {
     display: flex;
@@ -227,7 +245,7 @@ transition: width 0.5s ease-in-out;
     font-size: clamp(1.2rem, 2vw, 1.5rem);
     padding: 0.7rem;
     border: 0.1rem solid var(--cor-azul);
-    border-radius: 0.4rem;
+    border-radius: 10rem;
     background-color: var(--cor-azul);
     transition: box-shadow 0.3s ease;
 }
@@ -236,10 +254,12 @@ transition: width 0.5s ease-in-out;
 }
 
 .social-icon {
-    font-size: clamp(2rem, 3vw, 3rem);
-    padding: 0.8rem;
+    font-size: 3rem;
+    padding: 0.5rem;
     display: inline-block;
+
 }
+
 .social-icon i {
     transition: transform 0.3s ease;
   }
@@ -328,21 +348,25 @@ width: 100%;
 padding:  3rem 1rem 3rem 1rem;
 }
 #habilidades div {
+
 background-color: whitesmoke;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
     margin: 1rem;
     padding: 2rem;
-    border: 1px solid gray;
     border-radius: 10px;
  width: 100%;
     text-align: left;
+    box-shadow: 0 0 0.4rem;
+}
+
+.fa-server, .fa-database, .fa-git-alt  {
+    color: var(--cor-azul);
 }
 #habilidades .card-hab-escuro {
-    box-shadow: none;
     background-color: #111111;
-
 }
 @media (max-width:1100px) {
 #habilidades {
@@ -351,55 +375,67 @@ background-color: whitesmoke;
 
 }
 #habilidades div h1 {
-    color: var(--cor-azul);
+font-weight: 900;
     font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
 }
+
 #habilidades div h2 {
     font-weight: normal;
-    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-size: clamp(1.2rem, 2.5vw, 1.7rem);
     margin-bottom: 3rem;
 }
 #habilidades div p {
     font-size: clamp(1.2rem, 2.5vw, 2rem);
     margin-bottom: 2rem;
 }
-#habilidades div a {
-    max-width: 7rem;
-    text-underline-offset: 0.3rem;
+.link-modal {
+    max-width: 9rem;
     text-decoration: underline;
+    text-underline-offset: 0.3rem;
+padding: 0.3rem;
+border-radius: 0.8rem;
     font-weight: bold;
     font-size: clamp(0.9rem, 2.5vw, 1.2rem);
-    color: var(--cor-azul);
 
 }
 
-#projetos {
-border-radius: 25px;
-    padding-bottom:5rem;
-    transition: background-color 1s ease;
+
+.container-projetos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
 }
 .titulo-projetos {
-    color: var(--cor-azul);
+    position: relative;
     font-size: clamp(2rem, 5vw, 5rem);
-margin-bottom:0.5rem;
 text-align: center;
-width: 100%;
-
+margin-bottom: 2rem;
+}
+.titulo-projetos:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.3rem;
+    height: 2px;
+    width: 50%;
+    background-color: var(--cor-azul);
+    
 }
 .subtitulo-projetos {
-    width: 100%;
     font-size:clamp(1.5rem, 2vw, 2rem);
-    text-align: center;
-    margin-bottom:5rem;
 }
+
 #grid-projetos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(33.8rem, 1fr));
     gap: 5rem;
     max-width: 150rem;  
     margin: 0 auto;
-    padding: 1rem;
+    padding: clamp(1rem, 5vw, 5rem);
 
 }
 .div-grid {
@@ -407,50 +443,50 @@ width: 100%;
     position: relative;
     border-radius: 5%; 
     overflow: hidden;
-    background-color: #395f91;
+    background-color: var(--cor-azul);
 }
 
 .texto-grid{
     position: absolute;
-    left:2rem;
-    right: 2rem;
-    bottom: 2rem;
-    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    left:0;
+    right:0;
+    bottom:0;
+    top:0;
+    border-radius: 5%;
     opacity: 0;
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 1.5rem;
-    transform: translateY(50%) scale(0.8);
+    backdrop-filter: blur(0.3rem);
+    padding: 5rem;
+    transform: scale(0.5);
     transition: opacity 0.4s ease, transform 0.4s ease-in-out;
-}
-@media (max-width:768px) {
-.texto-grid {
-    border-radius: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
-}
-.texto-grid-noturno {
-    background-color: rgba(17, 17, 17, 0.9);
+    box-shadow: inset 0 0 10px -2px;
 }
 .div-grid:hover .texto-grid {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: scale(1);  
 }
+
+.texto-grid-noturno {
+    background-color: rgba(17, 17, 17, 0.9);
+    backdrop-filter: blur(0.3rem);
+}
+
 .div-grid a {
     color: var(--cor-azul);
 }
 .titulo-grid {
     display: flex;
     align-items: center;
-    color: var(--cor-azul);
     font-size: clamp(1.7rem, 2vw, 2.7rem);
     padding-bottom: 1.2rem;
 }
 .titulo-grid i {
     padding-left: 1.2rem;
+   color: var(--cor-azul);;
 }
 .titulo-grid i:first-child {
     margin-left: auto;
@@ -461,19 +497,18 @@ width: 100%;
 
 }
 .deploy-grid {
-
     font-size: clamp(1rem, 2vw, 1.5rem);
 margin-right: 1.2rem;
 padding: 0.3rem;
 text-underline-offset: 0.3rem;
     text-decoration: underline;
+    
 }
 .codigo-grid {
-
     font-size: clamp(1rem, 2vw, 1.5rem);
     padding: 0.3rem;
     text-underline-offset: 0.3rem;
-    text-decoration: underline;
+    text-decoration: underline;   
 }
 
 .div-grid img {
@@ -482,24 +517,43 @@ text-underline-offset: 0.3rem;
   object-fit: contain;
   border-radius: 5%; 
 }
+.container-exp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 150rem;
+    margin: 2rem auto;
+}
 .titulo-exp {
     text-align: center;
     font-size: 1.5rem;
-    padding: 5rem 0 1rem 0;
-
+    margin-bottom: 1rem;
+font-weight: normal;
+position: relative;
+}
+.titulo-exp:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.3rem;
+    height: 2px;
+    width: 50%;
+    background-color: var(--cor-azul);
 }
 .subtitulo-exp {
-color: var(--cor-azul);
 text-align: center;
 font-size: 3rem;
-padding-bottom: 1rem;
+margin-bottom: 1rem;
+
 }
+
+
 .paragrafo-exp {
 text-align: center;
 max-width: 50rem;
 font-size: 2rem;
 margin: 0 auto;
-margin-bottom: 5rem;
 
 }
 
@@ -576,6 +630,7 @@ transform: translateY(150px);
 #sobre {
     padding: 3rem 0 3rem 0;
 background-image: url('https://transparenttextures.com/patterns/brushed-alum-dark.png');
+background-position: center;
     background-color: white;       
 transition: background-color 1s ease;
 
@@ -590,6 +645,17 @@ margin: 0 auto;
 padding: 0 3rem ;
 
 }
+.btn-download-cv button {
+    padding: 0.5rem 1rem;
+    border-radius: 10rem;
+    font-size: 1.5rem;
+    border: 0.1rem solid gray;
+    transition:  background-color 0.5s ease, color 0.5s ease;
+}
+.btn-download-cv button:hover {
+    background-color: var(--cor-azul);
+    color: white;
+}
 @media (max-width:768px) {
     .sobre-flex {
         flex-direction: column;
@@ -600,15 +666,24 @@ padding: 0 3rem ;
     background-color: black;
 }
 .titulo-sobre {
-    color: var(--cor-azul);
+    display: inline-block;
 font-weight: bold;
 margin-bottom: 3rem;
     letter-spacing: 0.5rem;
     text-transform: uppercase;
     font-weight: bold;
     font-weight: normal;
-    font-size: clamp(2rem, 5vw, 3rem);
-    
+    font-size: clamp(2rem, 5vw, 3rem); 
+    position: relative; 
+}
+.titulo-sobre:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.3rem;
+    height: 2px;
+    width: 50%;
+    background-color: var(--cor-azul);
 }
 .paragrafo-sobre {
  
@@ -641,6 +716,7 @@ margin-bottom: 2rem;
     margin: 5rem auto;
     position: relative;
 }
+
 @media (max-width:768px) {
     #contato {
     flex-direction: column;
@@ -652,19 +728,30 @@ margin-bottom: 2rem;
     }
 }
 .titulo-card-ctt {
-
+position: relative;
     font-size:clamp(1.5rem, 2vw, 3rem);
-    text-align: center;
     margin-bottom: 1rem;
+}
+.titulo-card-ctt:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.3rem;
+    height: 2px;
+    width: 50%;
+    background-color: var(--cor-azul);
 }
 
 
 .card-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     box-shadow: 0 2px 5px;
     border: 1px solid #ccc;
     padding: 2rem;
     border-radius: 0.4rem;
-background: url('https://transparenttextures.com/patterns/binding-dark.png');
+
 }
 
 .card-contato form {
@@ -683,6 +770,8 @@ form button:hover {
 .container-contato {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    height: 36rem;
     margin-right: 15rem;
 
 }
@@ -691,6 +780,7 @@ form button:hover {
     .container-contato {
         margin-right: 0;
         margin-bottom: 4rem;
+        height: auto;
     }
     .div-btn-ctt {
         width: 100%;
@@ -699,10 +789,9 @@ form button:hover {
     }
 }
 .titulo-container-ctt {
-   
     font-size:clamp(2.5rem, 2vw, 4rem);
+    margin-bottom:3rem;
     color: var(--cor-azul);
-    margin-bottom:3rem ;
 }
 .infos-container-ctt {
     margin-bottom: 1rem;
@@ -716,9 +805,6 @@ form button:hover {
     margin-right: 1rem;
 }
 
-
-
-
 form input, form textarea, form button {
     padding: 1rem;
     margin: 0.5rem;
@@ -730,5 +816,55 @@ form input, form textarea, form button {
 footer {
     background-color: black;
     background-image: url('https://transparenttextures.com/patterns/fabric-of-squares.png');
-    min-height: 10vh;
+    min-height: 10vh; 
+}
+footer section {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: white;
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+ align-items: center;
+
+}
+section div h3 {
+    color: var(--cor-azul);
+    font-size: clamp(1.3rem, 2vw, 2.3rem);
+    margin: 1rem 0;
+}
+.menu a, .conectar a {
+    display: block; 
+    margin:0.5rem 0; 
+  }
+
+  .renan-rodrigues p {
+    margin-bottom: 1rem;
+  }
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.direitos-reservados {
+    font-size: clamp(1rem, 2vw, 1.8rem);
+
+  color: white;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer section {
+        align-items: center;
+        text-align: center;
+    }
+  .menu, .conectar {
+    display: none;
+  }
 }
