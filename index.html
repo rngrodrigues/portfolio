@@ -1,297 +1,385 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renan Rodrigues</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renan Rodrigues</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  
-    <header id="menu">
-        <nav>
-            <ul class="navbar">
-                <li class="logo"><a href="#inicio">RR</a></li>
-                <li class="menu-toggle" onclick="toggleMenu()">
-                    <i class="fa-solid fa-bars toggle-icon" id="menu-icon"></i> 
-                    <i class="fa-solid fa-xmark toggle-icon" id="close-icon"></i> 
-                </li>
-                <li class="menu-container">
-                    <ul class="menu-items">
-                        <li><a class="item-menu" href="#projetos">PROJETOS</a></li>
-                        <li><a class="item-menu" href="#experiencia">EXPERIÊNCIA</a></li>
-                        <li><a class="item-menu" href="#sobre">SOBRE</a></li>
-                        <li><a class="item-menu" href="#contato">CONTATO</a></li>
-                        <li class="buttons">
-                            
-                            <button><i class="fa-solid fa-language"></i></button>
-                            <button id="toggleTheme" class="botao-tema" onclick="alterarTema()">
-                                <i class="fas fa-moon icon moon" id="icon"></i>
-                            </button>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
+
+  <header id="menu">
+    <nav>
+      <ul class="navbar">
+        <li class="logo"><a href="#inicio">RR</a></li>
+        <li class="menu-toggle" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars toggle-icon" id="menu-icon"></i>
+          <i class="fa-solid fa-xmark toggle-icon" id="close-icon"></i>
+        </li>
+        <li class="menu-container">
+          <ul class="menu-items">
+            <li><a class="item-menu" href="#projetos">PROJETOS</a></li>
+            <li><a class="item-menu" href="#experiencia">EXPERIÊNCIA</a></li>
+            <li><a class="item-menu" href="#sobre">SOBRE</a></li>
+            <li><a class="item-menu" href="#contato">CONTATO</a></li>
+            <li class="buttons">
+
+              <button><i class="fa-solid fa-language"></i></button>
+              <button id="toggleTheme" class="botao-tema" onclick="alterarTema()">
+                <i class="fas fa-moon icon moon" id="icon"></i>
+              </button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
   <main>
-    <div class="max-width-container"> 
-<div id="inicio" class="img-inicio"><img src="assets/img/img-inicio.png" alt=""></div>
-<section id="texto-inicio"><h1>Desenvolvedor  <span class="back-end" data-text="Back-End"> Back-End </span></h1><p> Olá, me chamo Renan Rodrigues, estou constantemente aprendendo e aperfeiçoando meus conhecimentos para unir performance e usabilidade.</p>
    
- <div class="container-icons-social">
-    <a class="social-icon" href="https://www.linkedin.com/seu-perfil" target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-    </a>
-    
-    <a class="social-icon" href="https://github.com/seu-usuario" target="_blank">
-        <i class="fa-brands fa-github"></i>
-    </a>
-    
-    <a class="social-icon" href="https://wa.me/seunumerocomddd" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>   
-    </a>
-</div>
-<button class="btn-padrao"><i class="fa-solid fa-arrow-up-right-from-square pulsar" style="margin-right: 1rem;"></i>Fale comigo</button>
- </section>
+    <div class="max-width-container">
+      <div id="inicio" class="img-inicio"><img src="assets/img/img-inicio.png" alt=""></div>
+      <section id="texto-inicio">
+        <h1>Desenvolvedor <span class="back-end" data-text="Back-End"> Back-End </span></h1>
+        <p> Olá, me chamo Renan Rodrigues, estou constantemente aprendendo e aperfeiçoando meus conhecimentos para unir
+          performance e usabilidade.</p>
 
-<div class="max-width-content">
-    <div class="div-icons-lang">
+        <div class="container-icons-social">
+          <a class="social-icon" href="https://www.linkedin.com/seu-perfil" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
 
-        <div class="wrapper">
-            <div class="lista">
-                <div class="item"><i class="devicon-html5-plain" title="HTML5"></i><span>HTML5</span></div>
-                <div class="item"><i class="devicon-css3-plain" title="CSS3"></i><span>CSS3</span></div>
-                <div class="item"><i class="devicon-javascript-plain" title="Java Script"></i><span>Java Script</span></div>
-                <div class="item"><i class="devicon-php-plain" title="PHP"></i><span>PHP</span></div>
-                <div class="item"><i class="devicon-mysql-plain" title="MySql"></i><span>MySQL</span></div>
-                <div class="item"><i class="devicon-postgresql-plain" title="PSql"></i><span>PostgreSQL</span></div>
-                <div class="item"><i class="devicon-java-plain" title="Java"></i><span>Java</span></div>
-            </div>
-            
+          <a class="social-icon" href="https://github.com/seu-usuario" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a class="social-icon" href="https://wa.me/seunumerocomddd" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
         </div>
+        <button class="btn-padrao"><i class="fa-solid fa-arrow-up-right-from-square pulsar"
+            style="margin-right: 1rem;"></i>Fale comigo</button>
+      </section>
+
+      <div class="max-width-content">
+        <div class="div-icons-lang">
+
+          <div class="wrapper">
+            <div class="lista">
+              <div class="item"><i class="devicon-html5-plain" title="HTML5"></i><span>HTML5</span></div>
+              <div class="item"><i class="devicon-css3-plain" title="CSS3"></i><span>CSS3</span></div>
+              <div class="item"><i class="devicon-javascript-plain" title="Java Script"></i><span>Java Script</span>
+              </div>
+              <div class="item"><i class="devicon-php-plain" title="PHP"></i><span>PHP</span></div>
+              <div class="item"><i class="devicon-mysql-plain" title="MySql"></i><span>MySQL</span></div>
+              <div class="item"><i class="devicon-postgresql-plain" title="PSql"></i><span>PostgreSQL</span></div>
+              <div class="item"><i class="devicon-java-plain" title="Java"></i><span>Java</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section id="habilidades">
+        <div class="card-um-hab card-hab">
+          <h1> Back-End</h1>
+          <h2><i class="fas fa-server" style="margin-right: 1rem;"></i>Estruturação e lógica</h2>
+          <p>Experiência com estruturação e lógica, garantindo eficiência e boas práticas no desenvolvimento.</p><a
+            class="link-modal" onclick="document.getElementById('modal-habilidades').style.display='block'"><i class="fas fa-info-circle"
+              style="margin-right: 0.5rem; font-size: 1rem;"></i>Saiba mais</a>
+        </div>
+        
+        <div class="card-dois-hab card-hab">
+          <h1>Banco de Dados</h1>
+          <h2><i class="fas fa-database" style="margin-right: 1rem;"></i>Armazenamento de informações</h2>
+          <p>Possuo conhecimento em modelagem, criação e consultas para organizar e estruturar dados.</p><a
+            class="link-modal" href="#"><i class="fas fa-info-circle"
+              style="margin-right: 0.5rem; font-size: 1rem;"></i>Saiba mais</a>          
+        </div>
+
+        <div class="card-tres-hab card-hab">
+          <h1>Versionamento</h1>
+          <h2><i class="fab fa-git-alt" style="margin-right: 1rem;"></i>Controle e histórico de código</h2>
+          <p>Tenho práticas em Git e plataformas como GitHub para versionamento e controle de código.</p><a
+            class="link-modal" href="#"><i class="fas fa-info-circle"
+              style="margin-right: 0.5rem; font-size: 1rem;"></i>Saiba mais</a>
+        </div>
+      </section>
+      <div id="modal-habilidades">
+        <div class="modal-content">
+          <span class="close" onclick="document.getElementById('modal-habilidades').style.display='none'">&times;</span>
+        <h1><i class="fas fa-server" style="margin-left: 1rem;"></i> Alguma coisa </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quaerat officiis numquam aliquid, eveniet laudantium placeat error quisquam non est. Facere illum, unde recusandae placeat sed corporis delectus consequatur vero.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis autem ipsam nulla repudiandae quaerat beatae quam maiores placeat nisi dignissimos modi laudantium culpa porro dolorum excepturi qui aut, eos quis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptate optio recusandae enim. Modi ipsam magnam exercitationem voluptas accusantium saepe, veritatis nisi consectetur magni. Vero nostrum repudiandae veniam minima labore.</p>
+</div>
+      </div>
     </div>
-</div>
-    <section id="habilidades">
-        <div class="card-um-hab card-hab"><h1> Back-End</h1><h2><i class="fas fa-server" style="margin-right: 1rem;"></i>Estruturação e lógica</h2><p>Experiência com estruturação e lógica, garantindo eficiência e boas práticas no desenvolvimento.</p><a class="link-modal" href="#"><i class="fas fa-info-circle" style="margin-right: 0.5rem; font-size: 1rem;"></i>Saiba mais</a></div>
-        <div class="card-dois-hab card-hab"><h1>Banco de Dados</h1><h2><i class="fas fa-database" style="margin-right: 1rem;" ></i>Armazenamento de informações</h2><p>Possuo conhecimento em modelagem, criação e consultas para organizar e estruturar dados.</p><a class="link-modal" href="#"><i class="fas fa-info-circle" style="margin-right: 0.5rem; font-size: 1rem;"></i>Saiba mais</a></div>
-    <div class="card-tres-hab card-hab"><h1>Versionamento</h1><h2><i class="fab fa-git-alt" style="margin-right: 1rem;"></i>Controle e histórico de código</h2><p>Tenho práticas em Git e plataformas como GitHub para versionamento e controle de código.</p><a class="link-modal" href="#"><i class="fas fa-info-circle" style="margin-right: 0.5rem; font-size: 1rem;"></i>Saiba mais</a></div>
-</section>
-</div>
 
     <div id="projetos" class="container-projetos">
-<h2 class="titulo-projetos">Projetos</h2> <p class="subtitulo-projetos  ">Alguns dos meus principais projetos:</p>
-</div>
+      <h2 class="titulo-projetos">Projetos</h2>
+      <p class="subtitulo-projetos  ">Alguns dos meus principais projetos:</p>
+    </div>
 
-<div id="grid-projetos">
-    <div class="div-grid">
-      <img src="assets/img/projeto1.png" alt="">
-      <div class="texto-grid">
-        <h2 class="titulo-grid">Titulo Projeto <i class="devicon-html5-plain" title="HTML5"></i> <i class="devicon-javascript-plain"></i> <i class="devicon-css3-plain"></i></h2>
-        <p class="paragrafo-grid">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ad amet rem unde sit, quo iste iusto provident ea sed nihil.</p>
-        <div>
-          <a href="#" class="deploy-grid"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.5rem;"></i>Ver projeto</a>
-          <a href="#" class="codigo-grid"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.5rem;"></i>Código</a>
+    <div id="grid-projetos">
+      <div class="div-grid">
+        <img src="assets/img/projeto1.png" alt="">
+        <div class="texto-grid">
+          <h2 class="titulo-grid">Titulo Projeto <i class="devicon-html5-plain" title="HTML5"></i> <i
+              class="devicon-javascript-plain"></i> <i class="devicon-css3-plain"></i></h2>
+          <p class="paragrafo-grid">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ad amet rem unde
+            sit, quo iste iusto provident ea sed nihil.</p>
+          <div>
+            <a href="#" class="deploy-grid"><i class="fa-solid fa-arrow-up-right-from-square"
+                style="margin-right: 0.5rem;"></i>Ver projeto</a>
+            <a href="#" class="codigo-grid"><i class="fa-solid fa-arrow-up-right-from-square"
+                style="margin-right: 0.5rem;"></i>Código</a>
+          </div>
         </div>
       </div>
-    </div>
-  
-    <div class="div-grid">
-      <img src="assets/img/projeto2.png" alt="">
-      <div class="texto-grid">
-        <h2 class="titulo-grid">Portfólio <i class="devicon-html5-plain" title="HTML"></i> <i class="devicon-css3-plain" title="CSS"></i> <i class="devicon-javascript-plain" title="Java Script"></i></h2>
-        <p class="paragrafo-grid">Landing page com meus projetos, habilidades e experiência, desenvolvida com HTML, CSS e JavaScript, priorizei um design limpo e responsivo para uma boa navegação.</p>
-        <div>
-          <a href="#" class="deploy-grid"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.5rem;"></i>Ver projeto</a>
-          <a href="#" class="codigo-grid"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.5rem;"></i>Código</a>
-        </div>
-      </div>
-    </div>
-  
-    <div class="div-grid">
-      <img src="assets/img/projeto3.png" alt="">
-      <div class="texto-grid">
-        <h2 class="titulo-grid">Titulo Projeto <i class="devicon-html5-plain" title="HTML5"></i> <i class="devicon-javascript-plain"></i> <i class="devicon-css3-plain"></i></h2>
-        <p class="paragrafo-grid">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ad amet rem unde sit, quo iste iusto provident ea sed nihil.</p>
-        <div>
-          <a href="#" class="deploy-grid"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.5rem;"></i>Ver projeto</a>
-          <a href="#" class="codigo-grid"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.5rem;"></i>Código</a>
-        </div>
-      </div>
-    </div>
-  
-    <div class="div-grid">
-      <img src="assets/img/projeto4.png" alt="">
-      <div class="texto-grid">
-        <h2 class="titulo-grid">Titulo Projeto <i class="devicon-html5-plain" title="HTML5"></i> <i class="devicon-javascript-plain"></i> <i class="devicon-css3-plain"></i></h2>
-        <p class="paragrafo-grid">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ad amet rem unde sit, quo iste iusto provident ea sed nihil.</p>
-        <div>
-          <a href="#" class="deploy-grid"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.5rem;"></i>Ver projeto</a>
-          <a href="" class="codigo-grid"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.5rem;"></i>Código</a>
-        </div>
-      </div>
-    </div>
-  
-    <div class="div-grid">
-      <img src="assets/img/projeto5.png" alt="">
-      <div class="texto-grid">
-        <h2 class="titulo-grid">Titulo Projeto <i class="devicon-html5-plain" title="HTML5"></i> <i class="devicon-javascript-plain"></i> <i class="devicon-css3-plain"></i></h2>
-        <p class="paragrafo-grid">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ad amet rem unde sit, quo iste iusto provident ea sed nihil.</p>
-        <div>
-          <a href="#" class="deploy-grid"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.5rem;"></i>Ver projeto</a>
-          <a href="" class="codigo-grid"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.5rem;"></i>Código</a>
-        </div>
-      </div>
-    </div>
-  
-    <div class="div-grid">
-      <img src="assets/img/projeto6.png" alt="">
-      <div class="texto-grid">
-        <h2 class="titulo-grid">Titulo Projeto <i class="devicon-html5-plain" title="HTML5"></i> <i class="devicon-javascript-plain"></i> <i class="devicon-css3-plain"></i></h2>
-        <p class="paragrafo-grid">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ad amet rem unde sit, quo iste iusto provident ea sed nihil.</p>
-        <div>
-          <a href="#" class="deploy-grid"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.5rem;"></i>Ver projeto</a>
-          <a href="" class="codigo-grid"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.5rem;"></i>Código</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  
 
-<div class="container-exp">
-<h2  id="experiencia" class="titulo-exp">EXPERIÊNCIA</h2>
-<h3 class="subtitulo-exp">Aprendizados ao longo do tempo</h3>
-<p class="paragrafo-exp">Um pouco das minhas vivências, conhecimentos e contato com programação.</p>
-</div>
-<section class="time-line">
-<div class="container-time-line">
-    <div class="time-line-content">
-        <h2>
+      <div class="div-grid">
+        <img src="assets/img/projeto2.png" alt="">
+        <div class="texto-grid">
+          <h2 class="titulo-grid">Portfólio <i class="devicon-html5-plain" title="HTML"></i> <i
+              class="devicon-css3-plain" title="CSS"></i> <i class="devicon-javascript-plain" title="Java Script"></i>
+          </h2>
+          <p class="paragrafo-grid">Landing page com meus projetos, habilidades e experiência, desenvolvida com HTML,
+            CSS e JavaScript, priorizei um design limpo e responsivo para uma boa navegação.</p>
+          <div>
+            <a href="#" class="deploy-grid"><i class="fa-solid fa-arrow-up-right-from-square"
+                style="margin-right: 0.5rem;"></i>Ver projeto</a>
+            <a href="#" class="codigo-grid"><i class="fa-solid fa-arrow-up-right-from-square"
+                style="margin-right: 0.5rem;"></i>Código</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="div-grid">
+        <img src="assets/img/projeto3.png" alt="">
+        <div class="texto-grid">
+          <h2 class="titulo-grid">Titulo Projeto <i class="devicon-html5-plain" title="HTML5"></i> <i
+              class="devicon-javascript-plain"></i> <i class="devicon-css3-plain"></i></h2>
+          <p class="paragrafo-grid">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ad amet rem unde
+            sit, quo iste iusto provident ea sed nihil.</p>
+          <div>
+            <a href="#" class="deploy-grid"><i class="fa-solid fa-arrow-up-right-from-square"
+                style="margin-right: 0.5rem;"></i>Ver projeto</a>
+            <a href="#" class="codigo-grid"><i class="fa-solid fa-arrow-up-right-from-square"
+                style="margin-right: 0.5rem;"></i>Código</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="div-grid">
+        <img src="assets/img/projeto4.png" alt="">
+        <div class="texto-grid">
+          <h2 class="titulo-grid">Titulo Projeto <i class="devicon-html5-plain" title="HTML5"></i> <i
+              class="devicon-javascript-plain"></i> <i class="devicon-css3-plain"></i></h2>
+          <p class="paragrafo-grid">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ad amet rem unde
+            sit, quo iste iusto provident ea sed nihil.</p>
+          <div>
+            <a href="#" class="deploy-grid"><i class="fa-solid fa-arrow-up-right-from-square"
+                style="margin-right: 0.5rem;"></i>Ver projeto</a>
+            <a href="" class="codigo-grid"><i class="fa-solid fa-arrow-up-right-from-square"
+                style="margin-right: 0.5rem;"></i>Código</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="div-grid">
+        <img src="assets/img/projeto5.png" alt="">
+        <div class="texto-grid">
+          <h2 class="titulo-grid">Titulo Projeto <i class="devicon-html5-plain" title="HTML5"></i> <i
+              class="devicon-javascript-plain"></i> <i class="devicon-css3-plain"></i></h2>
+          <p class="paragrafo-grid">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ad amet rem unde
+            sit, quo iste iusto provident ea sed nihil.</p>
+          <div>
+            <a href="#" class="deploy-grid"><i class="fa-solid fa-arrow-up-right-from-square"
+                style="margin-right: 0.5rem;"></i>Ver projeto</a>
+            <a href="" class="codigo-grid"><i class="fa-solid fa-arrow-up-right-from-square"
+                style="margin-right: 0.5rem;"></i>Código</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="div-grid">
+        <img src="assets/img/projeto6.png" alt="">
+        <div class="texto-grid">
+          <h2 class="titulo-grid">Titulo Projeto <i class="devicon-html5-plain" title="HTML5"></i> <i
+              class="devicon-javascript-plain"></i> <i class="devicon-css3-plain"></i></h2>
+          <p class="paragrafo-grid">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ad amet rem unde
+            sit, quo iste iusto provident ea sed nihil.</p>
+          <div>
+            <a href="#" class="deploy-grid"><i class="fa-solid fa-arrow-up-right-from-square"
+                style="margin-right: 0.5rem;"></i>Ver projeto</a>
+            <a href="" class="codigo-grid"><i class="fa-solid fa-arrow-up-right-from-square"
+                style="margin-right: 0.5rem;"></i>Código</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-exp">
+      <h2 id="experiencia" class="titulo-exp">EXPERIÊNCIA</h2>
+      <h3 class="subtitulo-exp">Aprendizados ao longo do tempo</h3>
+      <p class="paragrafo-exp">Um pouco das minhas vivências, conhecimentos e contato com programação.</p>
+    </div>
+    <section class="time-line">
+      <div class="container-time-line">
+        <div class="time-line-content">
+          <h2>
             Formação .NET (SENAC)
-            <span>2021-2022</span>
-        </h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, temporibus commodi adipisci, hic, aliquid facere ducimus ut non neque maiores quisquam nam esse. Excepturi sit explicabo non, corporis veritatis facilis!</p>
-    </div>
-</div>
-<div class="container-time-line">
-    <div class="time-line-content">
-        <h2> Aprendiz Tecnologia (Stefanini IT)
-            <span>2022-2024</span>
-        </h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, temporibus commodi adipisci, hic, aliquid facere ducimus ut non neque maiores quisquam nam esse. Excepturi sit explicabo non, corporis veritatis facilis!</p>
-    </div>
-</div>
-<div class="container-time-line">
-    <div class="time-line-content">
-        <h2> Seviços Administrativos (SENAC)
-            <span>2022-2024</span>
-        </h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, temporibus commodi adipisci, hic, aliquid facere ducimus ut non neque maiores quisquam nam esse. Excepturi sit explicabo non, corporis veritatis facilis!</p>
-
-    </div>
-</div>
-<div class="container-time-line">
-    <div class="time-line-content">
-        <h2>
-            Análise e Desenvolvimento de Sistemas (Estácio)
-            <span>2024-2026</span> 
-        </h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, temporib</p>
-
-    </div>
-</div>
-</section>
-
-<section id="sobre">
-    <div class="sobre-flex">
-    <div id="img-sobre"><img src="assets/img/img-inicio.png" alt=""></div> <div class="conteudo-sobre"> <h2 class="titulo-sobre">Algumas palavras sobre mim</h2><p class="paragrafo-sobre">Olá! Me chamo Renan Rodrigues e 
-        sou um estudante de programação. Meu principal interesse está no desenvolvimento back-end, e área de UX/UI.</p> <p class="paragrafo-sobre">Atualmente, estou focado em melhorar meus conhecimentos em Python e Java, busco sempre aprender no
-        vas tecnologias.</p><p class="paragrafo-sobre">No meu tempo livre, gosto de correr para melhorar meu desempenho, ir à academia para manter uma rotina saudável e jogar um fifa de vez em quando.</p> 
-        <div class="btn-download-cv">
-            <button><i class="fa fa-download" style="margin-right: 1rem;"></i> Download CV</button>
-           
+     
+          </h2>
+          <time datetime="2021">2021</time> <time datetime="2022"> - 2022</time>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, temporibus commodi adipisci, hic, aliquid
+            facere ducimus ut non neque maiores quisquam nam esse. Excepturi sit explicabo non, corporis veritatis
+            facilis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, temporibus commodi adipisci, hic, aliquid
+              facere ducimus ut non neque maiores quisquam nam esse. Excepturi sit explicabo non, corporis veritatis
+              facilis!</p>
         </div>
-    </div>
-</div>
-</section>
+      </div>
+      <div class="container-time-line">
+        <div class="time-line-content">
+          <h2> Aprendiz Tecnologia (Stefanini IT)
+            
+          </h2>
 
-<section id="contato">
-<div class="container-contato">
-<h2 class="titulo-container-ctt">Aguardo o seu contato!</h2>
-<p class="infos-container-ctt"><i class="fas fa-map-marker-alt"></i> Brasil, Rio de Janeiro</p>
-<p class="infos-container-ctt"><i class="fas fa-phone-alt"></i> +55 (21) 97633-3733</p>
-<p class="infos-container-ctt"><i class="fas fa-envelope"></i> devrenanrodrigues@gmail.com</p>
-<div class="div-btn-ctt"><button class="btn-padrao"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 1rem;"></i>Fale comigo</button></div>
-</div>
-    <div class="card-contato">
-    <h2 class="titulo-card-ctt">Contato</h2>
-    <form action="#" method="post">
-        <label for="nome"></label>
-        <input type="text" id="nome" name="nome" placeholder="Nome" required >
+          <time datetime="2022">2022</time> <time datetime="2024"> - 2024</time>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, temporibus commodi adipisci, hic, aliquid
+            facere ducimus ut non neque maiores quisquam nam esse. Excepturi sit explicabo non, corporis veritatis
+            facilis!</p>
+        </div>
+      </div>
+      <div class="container-time-line">
+        <div class="time-line-content">
+          <h2> Seviços Administrativos (SENAC)
 
-        <label for="email"></label>
-        <input type="email" id="email" name="email" placeholder="Email" required>
+          </h2>
+          <time datetime="2022">2022</time> <time datetime="2024"> - 2024</time>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, temporibus commodi adipisci, hic, aliquid
+            facere ducimus ut non neque maiores quisquam nam esse. Excepturi sit explicabo non, corporis veritatis
+            facilis!</p>
+            
 
-        <label for="mensagem"></label>
-        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Mensagem" required></textarea>
-        
-        <button class="btn-enviar" type="submit">Enviar</button>
-    </form>
-</div>
+        </div>
+      </div>
+      <div class="container-time-line">
+        <div class="time-line-content">
+          <h2>
+            Análise e Desenvolvimento de Sistemas (Estácio)
 
-</section>
-</main>
+          </h2>
+          <time datetime="2024">2024</time> <time datetime="2026"> - 2026</time>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam optio officia sunt non quaerat sit eligendi,
+             maxime aut, ipsa voluptatem eveniet ullam doloribus aperiam repellat quibusdam inventore repudiandae beatae mollitia.</p>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="sobre-flex">
+        <div id="img-sobre"><img src="assets/img/img-inicio.png" alt=""></div>
+        <div class="conteudo-sobre">
+          <h2 class="titulo-sobre">Algumas palavras sobre mim</h2>
+          <p class="paragrafo-sobre">Olá! Me chamo Renan Rodrigues e
+            sou um estudante de programação. Meu principal interesse está no desenvolvimento back-end, e área de UX/UI.
+          </p>
+          <p class="paragrafo-sobre">Atualmente, estou focado em melhorar meus conhecimentos em Python e Java, busco
+            sempre aprender no
+            vas tecnologias.</p>
+          <p class="paragrafo-sobre">No meu tempo livre, gosto de correr para melhorar meu desempenho, ir à academia
+            para manter uma rotina saudável e jogar um fifa de vez em quando.</p>
+          <div class="btn-download-cv">
+            <button><i class="fa fa-download" style="margin-right: 1rem;"></i> Download CV</button>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="container-contato">
+        <h2 class="titulo-container-ctt">Aguardo o seu contato!</h2>
+        <p class="infos-container-ctt"><i class="fas fa-map-marker-alt"></i> Brasil, Rio de Janeiro</p>
+        <p class="infos-container-ctt"><i class="fas fa-phone-alt"></i> +55 (21) 97633-3733</p>
+        <p class="infos-container-ctt"><i class="fas fa-envelope"></i> devrenanrodrigues@gmail.com</p>
+        <div class="div-btn-ctt"><button class="btn-padrao"><i class="fa-solid fa-arrow-up-right-from-square"
+              style="margin-right: 1rem;"></i>Fale comigo</button></div>
+      </div>
+      <div class="card-contato">
+        <h2 class="titulo-card-ctt">Contato</h2>
+        <form action="#" method="post">
+          <label for="nome"></label>
+          <input type="text" id="nome" name="nome" placeholder="Nome" required>
+
+          <label for="email"></label>
+          <input type="email" id="email" name="email" placeholder="Email" required>
+
+          <label for="mensagem"></label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Mensagem" required></textarea>
+
+          <button class="btn-enviar" type="submit">Enviar</button>
+        </form>
+      </div>
+
+    </section>
+  </main>
 
   <footer>
     <div class="max-width-container footer-container">
-    <section class="renan-rodrigues">
-    <div>
-      
-      <h3>Renan Rodrigues</h3><p>Em busca de uma oportunidade de estágio em desenvolvimento de software para aplicar e expandir meus conhecimentos na prática.</p>
-      <div>
-        <a class="social-icon" href="https://www.linkedin.com/seu-perfil" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-        
-        <a class="social-icon" href="https://github.com/seu-usuario" target="_blank">
-            <i class="fa-brands fa-github"></i>
-        </a>
-        
-        <a class="social-icon" href="https://wa.me/seunumerocomddd" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>   
-        </a>
+      <section class="renan-rodrigues">
+        <div>
+          <h3>Renan Rodrigues</h3>
+          <p>Em busca de uma oportunidade de estágio em desenvolvimento de software para aplicar e expandir meus
+            conhecimentos na prática.</p>
+          <div>
+            <a class="social-icon" href="https://www.linkedin.com/seu-perfil" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a class="social-icon" href="https://github.com/seu-usuario" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a class="social-icon" href="https://wa.me/seunumerocomddd" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu">
+        <div>
+          <h3>Navegação</h3>
+          <a href="#inicio">Home</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#experiencia">Experiência</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
+        </div>
+      </section>
+
+      <section class="conectar">
+        <div>
+          <h3>Projetos</h3>
+          <a href="#">To-do list</a>
+          <a href="#">Cafeteria</a>
+          <a href="#">Gerenciador </a>
+          <a href="#">Automação</a>
+          <a href="#">Vouveainda</a>
+
+        </div>
+      </section>
+
     </div>
-    </div>
-    </section>
-
-    <section class="menu">
-      <div>
-        <h3>Navegação</h3>
-        <a href="#">Projetos</a>
-        <a href="#">Experiência</a>
-        <a href="#">Sobre</a>
-        <a href="#">Contato</a>
-      </div>
-    </section>
-    
-    <section class="conectar">
-      <div>
-        <h3>Projetos</h3>
-        <a href="#">To-do list</a>
-        <a href="#">Cafeteria</a>
-        <a href="#">Gerenciador </a>
-        <a href="#">Automação</a>
-        <a href="#">Vouveainda</a>
-
-      </div>
-    </section>
-
-</div>
-<div class="direitos-reservados"> © 2025 Renan Rodrigues. Todos os direitos reservados. </div>
-  </footer>  
+    <div class="direitos-reservados"> © 2025 Renan Rodrigues. Todos os direitos reservados. </div>
+  </footer>
   <script src="js/main.js"></script>
 </body>
 
